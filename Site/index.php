@@ -98,7 +98,7 @@
           <h5 class="white-text">Connect</h5>
           <ul>
             <li><a class="white-text" href="http://facebook.com/chandan.shastri">Facebook</a></li>
-            
+
           </ul>
         </div>
       </div>
@@ -124,7 +124,7 @@
   <?php
 
 $con = mysqli_connect("localhost","chandanshastri","321654","COLLEGE");
-  
+
   if (mysqli_connect_errno())
   {
   echo "Sc Server is Down, Please Contact Chandan Shastri" . mysqli_connect_error();
@@ -135,6 +135,3 @@ else echo "<b> Database System and Server Status : </b><i> Online </i> "
 
   </body>
 </html>
-
-
-
