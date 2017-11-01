@@ -49,7 +49,7 @@
       <div class="row">
         <div class="col s12 m4">
           <div class="icon-block">
-            <h2 class="center light-blue-text"><i class="material-icons">flash_on</i></h2>
+
             <h5 class="center">Faster Access Speeds</h5>
 
             <p class="light"> The Entire System has been Optimized for Responsiveness and Engineered for Maximum Performance.</p>
@@ -58,7 +58,6 @@
 
         <div class="col s12 m4">
           <div class="icon-block">
-            <h2 class="center light-blue-text"><i class="material-icons">group</i></h2>
             <h5 class="center">User Data Security</h5>
 
             <p class="light">Entire Platform is vigoursly Tested for Reliablity and Security. The Platform uses the Latest <i>Hyper Emulation & Manupulation Algorithm</i>, Made by Chandan Shastri.</p>
@@ -67,7 +66,7 @@
 
         <div class="col s12 m4">
           <div class="icon-block">
-            <h2 class="center light-blue-text"><i class="material-icons">settings</i></h2>
+
             <h5 class="center">Fine Tuned Access</h5>
 
             <p class="light">The ProBase uses the most Latest Backend Technologies which are built for Extreme Conditions, Just-in-case to avoid Hacking & Data Loss. Every Version of ProBase uses the PHP 7 or higher to make sure that the System is Secure.</p>
@@ -79,34 +78,23 @@
     <br><br>
   </div>
 
-  <footer class="page-footer orange">
+  <footer class="page-footer black">
     <div class="container">
       <div class="row">
-        <div class="col l6 s12">
-          <h5 class="white-text">About ProBase</h5>
-          <p class="grey-text text-lighten-4">ProBase is a College Database Management Solution Developed by <a href="http://facebook.com/chandan.shastri" target="_blank">Chandan Shastri</a>, and the fundings from Vishal Naik.</p>
+
+          <center>
+          <h5 class="blue-text text-lighten-1">About ProBase</h5>
+          <p class="white-text text-lighten-4">ProBase is a College Database Management Solution, Focused on High Performance and Reliability.</a></p>
+        </center>
 
 
-        </div>
-        <div class="col l3 s12">
-          <h5 class="white-text">Feedback</h5>
-          <ul>
-            <li><a class="white-text" href="http://chandanshastri.blogspot.com">Blog</a></li>
-          </ul>
-        </div>
-        <div class="col l3 s12">
-          <h5 class="white-text">Connect</h5>
-          <ul>
-            <li><a class="white-text" href="http://facebook.com/chandan.shastri">Facebook</a></li>
 
-          </ul>
-        </div>
       </div>
     </div>
     <div class="footer-copyright">
-      <div class="container">
+      <div class="container"><center>
       Made by <a class="orange-text text-lighten-3" href="http://chandanshastri.blogspot.com">Chandan Shastri.</a>
-      </div>
+    </center></div>
     </div>
   </footer>
 
