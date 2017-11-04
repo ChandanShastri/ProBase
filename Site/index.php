@@ -84,7 +84,7 @@
       <div class="row">
 
           <center>
-          <h5 class="blue-text text-lighten-1">About ProBase</h5>
+          <h5 class="blue-text text-lighten-1"><a class="orange-text text-lighten-3" href="view.php" target="_blank">About ProBase</a></h5>
           <p class="white-text text-lighten-4">ProBase is a College Database Management Solution, Focused on High Performance and Reliability.</a></p>
         </center>
 
