@@ -14,5 +14,6 @@
       <a-text font="kelsonsans" value="Swarnavalli, Sirsi" width="6" position="-2.5 0.25 -1.5"
               rotation="0 15 0"></a-text>
     </a-scene>
+    <b><center>RETURN</center></b>
   </body>
 </html>
