@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Nov 05, 2017 at 06:40 PM
+-- Generation Time: Nov 05, 2017 at 07:34 PM
 -- Server version: 10.1.28-MariaDB
 -- PHP Version: 7.1.10
 
@@ -465,11 +465,19 @@ CREATE TABLE `STUDENT_INFO` (
   `Fname` varchar(20) DEFAULT NULL,
   `Lname` varchar(20) DEFAULT NULL,
   `Gender` char(1) DEFAULT NULL,
-  `Phone` int(10) DEFAULT NULL,
-  `Pphone` int(10) DEFAULT NULL,
+  `Phone` varchar(10) DEFAULT NULL,
+  `Pphone` varchar(10) DEFAULT NULL,
   `Birthdate` date NOT NULL,
   `Address` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `STUDENT_INFO`
+--
+
+INSERT INTO `STUDENT_INFO` (`Usn`, `Fname`, `Lname`, `Gender`, `Phone`, `Pphone`, `Birthdate`, `Address`) VALUES
+('4AL15IS009', 'Aditya', 'Hegde', 'M', '2147483647', '2147483647', '1997-03-11', 'kodowqdkqwkd'),
+('4AL15IS011', 'Chandan', 'Shastri', 'M', '9487755', '8747445', '1997-03-11', 'HHHHHHH');
 
 --
 -- Indexes for dumped tables
