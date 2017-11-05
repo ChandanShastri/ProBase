@@ -55,12 +55,26 @@
       <div class="row">
         <div class="input-field col s12">
           Parent's Phone :
-          <input name="Phone" value="" id="Phone" type="number" class="validate">
+          <input name="PPhone" value="" id="Phone" type="number" class="validate">
+          <label for="xname"></label>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="input-field col s12">
+          Date of Birth :
+          <input name="Birthdate" value="" id="DATE" type="date" class="date-picker">
           <label for="xname"></label>
         </div>
       </div>
 
 
+      <div class="row">
+        <div class="input-field col s12">
+          <textarea name="Address" id="textarea1" class="materialize-textarea"></textarea>
+          <label for="textarea1">Textarea</label>
+        </div>
+      </div>
 
       <p>
       <input name="Gender" type="radio" id="test1" value="M" />
@@ -90,24 +104,17 @@
 
   <?php
   session_start();
+  error_reporting(0);
+
 
 if ($_SESSION['varname']=="SS")
 {
-  echo "<script>alert(\"System : DATA SAVED \")</script>"
+  $_SESSION['varname']=="NN";
+  echo "<script>alert(\"System : DATA SAVED \")</script>";
 }
-  error_reporting(0);
 
-  if($_POST["name"]==null)
-  {
-  echo "<b> System Ready for Operation.</b>";
-  }
-  else
-  {
-    echo "<script>alert(\"System : DATA SAVED \")</script>";
-    echo $_POST["name"];
-    header("Location: view.php");
 
-  }
+
 
   $con = mysqli_connect("localhost","chandanshastri","321654","COLLEGE");
 

@@ -16,9 +16,22 @@ else
   $_SESSION['varname'] = "ACTIVE";
 }
 
-$sql = "INSERT INTO STUDENT_INFO ('$_POST["Usn"]', '$_POST["Fname"]', '$_POST[Lname]','$_POST["Gender"]','$_POST["Phone"]','$_POST["Pphone"]','$_POST["Birthdate"]','$_POST["Address"]');";
 
-if ($conn->query($sql) === TRUE) {
+
+
+
+$Usn=$_POST["Usn"];
+$Fname=$_POST["Fname"];
+$Lname=$_POST["Lname"];
+$Phone=$_POST["Phone"];
+$Pphone=$_POST["PPhone"];
+$Birthdate=$_POST["Birthdate"];
+$Address=$_POST["Address"];
+$Gender=$_POST["Gender"];
+
+$sql = "INSERT INTO STUDENT_INFO values ('$Usn','$Fname','$Lname','$Gender','$Phone','$Pphone','$Birthdate','$Address')";
+
+if ($con->query($sql) === TRUE) {
     $_SESSION['varname'] = "SS";
 
 } else {
