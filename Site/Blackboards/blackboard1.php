@@ -1,4 +1,6 @@
 <?php
+session_start();
+$_SESSION['varname'] = "HELLO 11122";
 
 $con = mysqli_connect("localhost","chandanshastri","321654","COLLEGE");
 
@@ -10,5 +12,5 @@ if (mysqli_connect_errno())
 else echo "<b> Database System and Server Status : </b><i> Online </i> ";
 
 echo $_POST["name"];
-
+header("Location: console.php");
 ?>

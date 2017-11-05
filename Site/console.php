@@ -23,7 +23,7 @@
 
 
   <div class="row">
-    <form class="col s12" method="post" action="console.php">
+    <form class="col s12" method="post" action="Blackboards/blackboard1.php">
       <div class="row">
         <div class="input-field col s6">
           Name :
@@ -88,8 +88,8 @@
 <center>
   <?php
   session_start();
-  $_SESSION['varname'] = $var_value;
 
+echo $_SESSION['varname'];
   error_reporting(0);
 
   if($_POST["name"]==null)
