@@ -24,57 +24,56 @@
 
   <div class="row">
     <form class="col s12" method="post" action="Blackboards/blackboard1.php">
+
+      <div class="row">
+        <div class="input-field col s12">
+          USN :
+          <input name="Usn" id="xname" type="text" class="validate">
+          <label for="xname"></label>
+        </div>
+      </div>
       <div class="row">
         <div class="input-field col s6">
           Name :
-          <input placeholder="" name="name" id="first_name" type="text" class="validate">
+          <input placeholder="" name="Fname" id="first_name" type="text" class="validate">
           <label for="first_name"></label>
         </div>
         <div class="input-field col s6">
           Last Name :
-          <input id="last_name" type="text" class="validate">
+          <input name="Lname" id="last_name" type="text" class="validate">
           <label for="last_name"></label>
         </div>
       </div>
       <div class="row">
         <div class="input-field col s12">
-          XNAME :
-          <input value="" id="xname" type="text" class="validate">
+          Phone :
+          <input name="Phone" value="" id="Phone" type="number" class="validate">
           <label for="xname"></label>
         </div>
       </div>
+
       <div class="row">
         <div class="input-field col s12">
-          <input id="password" type="password" class="validate">
-          <label for="password">Password</label>
-        </div>
-      </div>
-      <div class="row">
-        <div class="input-field col s12">
-          <input id="email" type="email" class="validate">
-          <label for="email">Email</label>
+          Parent's Phone :
+          <input name="Phone" value="" id="Phone" type="number" class="validate">
+          <label for="xname"></label>
         </div>
       </div>
 
+
+
       <p>
-      <input name="group1" type="radio" id="test1" value="M" />
+      <input name="Gender" type="radio" id="test1" value="M" />
       <label for="test1">Male</label>
     </p>
     <p>
-      <input name="group1" type="radio" id="test2" value="F" />
+      <input name="Gender" type="radio" id="test2" value="F" />
       <label for="test2">Female</label>
     </p>
 
 
 
-      <div class="row">
-        <div class="col s12">
-          This is an inline input field:
-          <div class="input-field inline">
-            <input id="email" type="email" class="validate">
-            <label for="email" data-error="wrong" data-success="right">Email</label>
-          </div>
-        </div>
+
         <div class="row">
           <div class="input-field col s12">
             <input id="button" type="submit" class="validate" value="Submit">
@@ -86,10 +85,16 @@
     </form>
   </div>
 <center>
+
+
+
   <?php
   session_start();
 
-echo $_SESSION['varname'];
+if ($_SESSION['varname']=="SS")
+{
+  echo "<script>alert(\"System : DATA SAVED \")</script>"
+}
   error_reporting(0);
 
   if($_POST["name"]==null)

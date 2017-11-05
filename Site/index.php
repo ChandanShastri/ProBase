@@ -35,7 +35,7 @@
         <h5 class="header col s12 light">A Fully Functional Database System with Easy to use Controls & Options. </h5>
       </div>
       <div class="row center">
-        <a href="view.php" id="download-button" class="btn-large waves-effect waves-light orange">Login</a>
+        <a href="console.php" id="download-button" class="btn-large waves-effect waves-light orange">Go to Console</a>
       </div>
       <br><br>
 

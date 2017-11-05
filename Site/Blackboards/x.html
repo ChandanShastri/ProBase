@@ -61,4 +61,33 @@
 
 
 
- 
+
+
+
+
+
+
+
+
+ <div class="row">
+   <div class="col s12">
+     This is an inline input field:
+     <div class="input-field inline">
+       <input id="email" type="email" class="validate">
+       <label for="email" data-error="wrong" data-success="right">Email</label>
+     </div>
+   </div>
+
+
+   
+ +---------+-------------+------+-----+---------+-------+
+ | Field   | Type        | Null | Key | Default | Extra |
+ +---------+-------------+------+-----+---------+-------+
+ | Usn     | varchar(10) | NO   | PRI | NULL    |       |
+ | Fname   | varchar(20) | YES  |     | NULL    |       |
+ | Lname   | varchar(20) | YES  |     | NULL    |       |
+ | Gender  | char(1)     | YES  |     | NULL    |       |
+ | Phone   | int(10)     | YES  |     | NULL    |       |
+ | Pphone  | int(10)     | YES  |     | NULL    |       |
+ | Address | varchar(50) | YES  |     | NULL    |       |
+ +---------+-------------+------+-----+---------+-------+
