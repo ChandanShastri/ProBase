@@ -21,7 +21,7 @@ $result = $con->query($sql);
 if ($result->num_rows > 0) {
     // output data of each row
     while($row = $result->fetch_assoc()) {
-        echo $row["Usn"]. "\t" . $row["Fname"]. "\t" . $row["Lname"]."\t" . $row["Gender"]."\t" . $row["Birthdate"]."\t" . $row["Phone"]."\t" . $row["Pphone"]."\t" . $row["Address"]. "<br>";
+        echo $row["Usn"]. "\t" . $row["Fname"]. "\t" . $row["Lname"]."\t" . $row["Gender"]."\t" . $row["Birthdate"]."\t" . $row["Phone"]."\t" . $row["Pphone"]."\t" . $row["Address"]. "<br><br>";
     }
 } else {
     echo "0 results";
