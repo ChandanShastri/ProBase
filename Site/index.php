@@ -11,6 +11,23 @@
   <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 </head>
+
+
+<?php
+
+session_start();
+error_reporting(0);
+if($_SESSION['varname']=="XX")
+{
+echo "<script>alert(\" User Registration Successful..! \\n Please Login using your Email & Password. \")</script>";
+
+}
+session_destroy();
+?>
+
+
+
+
 <body>
   <nav class="light-blue lighten-1" role="navigation">
     <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">ProBase v0.1</a>

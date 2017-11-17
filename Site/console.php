@@ -27,72 +27,23 @@
 
       <div class="row">
         <div class="input-field col s12">
-          USN :
-          <input name="Usn" id="xname" type="text" class="validate">
-          <label for="xname"></label>
-        </div>
-      </div>
-      <div class="row">
-        <div class="input-field col s6">
-          Name :
-          <input placeholder="" name="Fname" id="first_name" type="text" class="validate">
-          <label for="first_name"></label>
-        </div>
-        <div class="input-field col s6">
-          Last Name :
-          <input name="Lname" id="last_name" type="text" class="validate">
-          <label for="last_name"></label>
-        </div>
-      </div>
-      <div class="row">
-        <div class="input-field col s12">
-          Phone :
-          <input name="Phone" value="" id="Phone" type="number" class="validate">
-          <label for="xname"></label>
+          <center><a href="add_student.php"  class="waves-effect waves-light btn-large">Add Student</a></center>
         </div>
       </div>
 
       <div class="row">
         <div class="input-field col s12">
-          Parent's Phone :
-          <input name="PPhone" value="" id="Phone" type="number" class="validate">
-          <label for="xname"></label>
+          <center><a href="Blackboards/Out1.php"  class="waves-effect waves-light btn-large">View Students</a></center>
         </div>
       </div>
 
-      <div class="row">
-        <div class="input-field col s12">
-          Date of Birth :
-          <input name="Birthdate" value="" id="DATE" type="date" class="date-picker">
-          <label for="xname"></label>
-        </div>
-      </div>
-
-
-      <div class="row">
-        <div class="input-field col s12">
-          <textarea name="Address" id="textarea1" class="materialize-textarea"></textarea>
-          <label for="textarea1">Textarea</label>
-        </div>
-      </div>
-
-      <p>
-      <input name="Gender" type="radio" id="test1" value="M" />
-      <label for="test1">Male</label>
-    </p>
-    <p>
-      <input name="Gender" type="radio" id="test2" value="F" />
-      <label for="test2">Female</label>
-    </p>
-
-
+<br><br>
 
 
         <div class="row">
-          <div class="input-field col s12">
-            <input id="button" type="submit" class="validate" value="Submit">
-            <label for="button"></label>
-          </div>
+        <center>  <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+    <i class="material-icons right">send</i>
+  </button></center>
 
 
       </div>
@@ -103,15 +54,7 @@
 
 
   <?php
-  session_start();
-  error_reporting(0);
 
-
-if ($_SESSION['varname']=="SS")
-{
-  $_SESSION['varname']=="NN";
-  echo "<script>alert(\"System : DATA SAVED \")</script>";
-}
 
 
 

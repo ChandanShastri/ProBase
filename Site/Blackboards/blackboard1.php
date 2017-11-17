@@ -13,7 +13,7 @@ else
 
 {
   echo "<b> Database System and Server Status : </b><i> Online </i> ";
-  $_SESSION['varname'] = "ACTIVE";
+  $_SESSION['varname']="XX";
 }
 
 
@@ -32,13 +32,13 @@ $Gender=$_POST["Gender"];
 $sql = "INSERT INTO STUDENT_INFO values ('$Usn','$Fname','$Lname','$Gender','$Phone','$Pphone','$Birthdate','$Address')";
 
 if ($con->query($sql) === TRUE) {
-    $_SESSION['varname'] = "SS";
+  $_SESSION['success'] = 'User Registration Success (Please login and update your profile)';
+  echo "<script>alert(\" User Registration Successful..!<br> Please Login using your Email & Password. \")</script>";
+  $_SESSION['varname']="XX";
+  header('Location: ../index.php');exit;
 
 } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
 }
 
-
-echo $_POST["name"];
-header("Location: ../console.php");
 ?>
