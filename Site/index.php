@@ -13,17 +13,6 @@
 </head>
 
 
-<?php
-
-session_start();
-error_reporting(0);
-if($_SESSION['varname']=="XX")
-{
-echo "<script>alert(\" User Registration Successful..! \\n Please Login using your Email & Password. \")</script>";
-
-}
-session_destroy();
-?>
 
 
 

@@ -5,7 +5,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
     <title>ProBase | Data Entry Panel</title>
-    
+
     <!-- CSS  -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
@@ -54,8 +54,8 @@
 
       <div class="row">
         <div class="input-field col s12">
-          Parent's Phone :
-          <input name="PPhone" value="" id="Phone" type="number" class="validate" required>
+          E-mail ID :
+          <input name="Email" value="" id="Email" type="email" class="validate" required>
           <label for="xname"></label>
         </div>
       </div>

@@ -13,6 +13,23 @@
   </head>
 
 
+
+  <?php
+
+  session_start();
+  error_reporting(0);
+  if($_SESSION['varname']=="XX")
+  {
+  echo "<script>alert(\" Student Registration Successful..! \\n Add the Additional Info for this Student now..! \")</script>";
+
+  }
+  session_destroy();
+  ?>
+
+
+
+
+
 <!-- DATA ENTRY  -->
 <div class="container">
   <br><br>
@@ -23,7 +40,7 @@
 
 
   <div class="row">
-    <form class="col s12" method="post" action="Blackboards/blackboard1.php">
+
 
       <div class="row">
         <div class="input-field col s12">
@@ -37,8 +54,17 @@
         </div>
       </div>
 
-<br><br>
 
+
+      <form class="col s12" method="post" action="Blackboards/search.php">
+
+        <div class="row">
+          <div class="input-field col s12">
+            USN :
+            <input name="Usn" id="xname" type="text" class="validate" required>
+            <label for="xname"></label>
+          </div>
+        </div>
 
         <div class="row">
         <center>  <button class="btn waves-effect waves-light" type="submit" name="action">Submit
@@ -48,6 +74,14 @@
 
       </div>
     </form>
+
+<br><br>
+
+
+
+
+      </div>
+
   </div>
 <center>
 

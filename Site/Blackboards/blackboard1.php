@@ -24,18 +24,18 @@ $Usn=$_POST["Usn"];
 $Fname=$_POST["Fname"];
 $Lname=$_POST["Lname"];
 $Phone=$_POST["Phone"];
-$Pphone=$_POST["PPhone"];
+$Email=$_POST["Email"];
 $Birthdate=$_POST["Birthdate"];
 $Address=$_POST["Address"];
 $Gender=$_POST["Gender"];
 
-$sql = "INSERT INTO STUDENT_INFO values ('$Usn','$Fname','$Lname','$Gender','$Phone','$Pphone','$Birthdate','$Address')";
+$sql = "INSERT INTO STUDENT_INFO values ('$Usn','$Fname','$Lname','$Gender','$Phone','$Email','$Birthdate','$Address')";
 
 if ($con->query($sql) === TRUE) {
   $_SESSION['success'] = 'User Registration Success (Please login and update your profile)';
   echo "<script>alert(\" User Registration Successful..!<br> Please Login using your Email & Password. \")</script>";
   $_SESSION['varname']="XX";
-  header('Location: ../index.php');exit;
+  header('Location: ../console.php');exit;
 
 } else {
     echo "Error: " . $sql . "<br>" . $conn->error;

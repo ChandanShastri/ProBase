@@ -12,11 +12,7 @@
     <link href="../css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   </head>
 
-<br>
-<div class="container">
-<center><h4 class="orange-text">Complete Student List</h4></center>
-<br><br>
-</div>
+
 
 <?php
 
@@ -34,8 +30,9 @@ else
   $_SESSION['varname'] = "ACTIVE";
 }
 
+$usn=$_POST['Usn'];
 
-$sql = "SELECT * from STUDENT_INFO";
+$sql = "SELECT * from STUDENT_INFO where Usn='$usn'";
 $result = $con->query($sql);
 
 if ($result->num_rows > 0) {
