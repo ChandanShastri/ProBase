@@ -12,7 +12,15 @@
     <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   </head>
 
+  <nav>
+      <div class="nav-wrapper">
+        <div class="col s12">
+          <a href="index.php" class="breadcrumb">&nbsp Home</a>
+          <a href="console.php" class="breadcrumb">Console</a>
 
+        </div>
+      </div>
+    </nav>
 
   <?php
 
@@ -44,7 +52,7 @@
 
       <div class="row">
         <div class="input-field col s12">
-          <center><a href="add_student.php"  class="waves-effect waves-light btn-large">Add Student</a></center>
+          <center><a href="add_student.php"  class="waves-effect waves-light btn-large">Add a Student</a></center>
         </div>
       </div>
 
@@ -54,15 +62,18 @@
         </div>
       </div>
 
+<br><br><hr>
 
 
+      <br><br><br>
       <form class="col s12" method="post" action="Blackboards/search.php">
 
         <div class="row">
-          <div class="input-field col s12">
-            USN :
+
+          <div class="col s4 push-s4">
+            <center> Search for USN :</center>
             <input name="Usn" id="xname" type="text" class="validate" required>
-            <label for="xname"></label>
+            <label for="xname">USN ( University Seat Number)</label>
           </div>
         </div>
 
@@ -70,6 +81,8 @@
         <center>  <button class="btn waves-effect waves-light" type="submit" name="action">Submit
     <i class="material-icons right">send</i>
   </button></center>
+
+  <br><br><hr>
 
 
       </div>

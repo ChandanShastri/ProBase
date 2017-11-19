@@ -11,7 +11,15 @@
     <link href="../css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
     <link href="../css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   </head>
-
+  <nav>
+      <div class="nav-wrapper">
+        <div class="col s12">
+          <a href="../index.php" class="breadcrumb">&nbsp Home</a>
+          <a href="../console.php" class="breadcrumb">Console</a>
+          <a href="#!" class="breadcrumb">Student List</a>
+        </div>
+      </div>
+    </nav>
 <br>
 <div class="container">
 <center><h4 class="orange-text">Complete Student List</h4></center>

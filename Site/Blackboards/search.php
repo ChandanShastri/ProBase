@@ -12,7 +12,10 @@
     <link href="../css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   </head>
 
-
+  <div class="container">
+  <center><br><h5 class="orange-text">Search Results for USN : <?php echo $_POST['Usn']; ?></h5></center>
+  <br><br>
+  </div>
 
 <?php
 
@@ -37,7 +40,7 @@ $result = $con->query($sql);
 
 if ($result->num_rows > 0) {
     // output data of each row
-    echo "<div class='container'><table border=\"0\"><tbody><thead><tr>
+    echo "<div ><table border=\"0\" class=\"centered\"><tbody><thead><tr>
     <th>Usn</th>
     <th>First Name</th>
     <th>Last Name</th>
