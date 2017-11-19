@@ -13,6 +13,13 @@
   </head>
 
 
+  <script>
+  $(document).ready(function() {
+  $('select').material_select();
+  });
+  </script>
+
+
 <!-- DATA ENTRY  -->
 <div class="container">
   <br><br>
@@ -52,6 +59,13 @@
         </div>
       </div>
 
+
+
+
+
+
+
+
       <div class="row">
         <div class="input-field col s12">
           E-mail ID :
@@ -87,15 +101,32 @@
     </p>
 
 <br><br>
+<div class="row">
+  <div class="input-field col s12">
 
+</div>
+</div>
+<select name="cars" class="browser-default">
+  <option value="volvo">Volvo</option>
+  <option value="saab">Saab</option>
+  <option value="fiat">Fiat</option>
+  <option value="audi">Audi</option>
+</select>
 
+<br><br>
         <div class="row">
         <center>  <button class="btn waves-effect waves-light" type="submit" name="action">Submit
     <i class="material-icons right">send</i>
   </button></center>
 
-
       </div>
+
+
+
+
+
+
+
     </form>
   </div>
 <center>
@@ -121,9 +152,6 @@
 
 </center>
 </div>
-
-
-
 
 
   <script src="js/materialize.js"></script>

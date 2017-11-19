@@ -12,31 +12,6 @@
     <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   </head>
 
-  <nav>
-      <div class="nav-wrapper">
-        <div class="col s12">
-          <a href="index.php" class="breadcrumb">&nbsp Home</a>
-          <a href="console.php" class="breadcrumb">Console</a>
-
-        </div>
-      </div>
-    </nav>
-
-  <?php
-
-  session_start();
-  error_reporting(0);
-  if($_SESSION['varname']=="XX")
-  {
-  echo "<script>alert(\" Student Registration Successful..! \\n Add the Additional Info for this Student now..! \")</script>";
-
-  }
-  session_destroy();
-  ?>
-
-
-
-
 
 <!-- DATA ENTRY  -->
 <div class="container">
@@ -48,66 +23,80 @@
 
 
   <div class="row">
-
+    <form class="col s12" method="post" action="Blackboards/blackboard1.php">
 
       <div class="row">
         <div class="input-field col s12">
-          <center><a href="add_student.php"  class="waves-effect waves-light btn-large">Add a Student</a></center>
+          USN :
+          <input name="Usn" id="xname" type="text" class="validate" required>
+          <label for="xname"></label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s6">
+          Name :
+          <input placeholder="" name="Fname" id="first_name" type="text" class="validate" required>
+          <label for="first_name"></label>
+        </div>
+        <div class="input-field col s6">
+          Last Name :
+          <input name="Lname" id="last_name" type="text" class="validate" required>
+          <label for="last_name"></label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          Phone :
+          <input name="Phone" value="" id="Phone" type="number" class="validate" required>
+          <label for="xname"></label>
         </div>
       </div>
 
       <div class="row">
         <div class="input-field col s12">
-          <center><a href="Blackboards/Out1.php"  class="waves-effect waves-light btn-large">View Students</a></center>
+          E-mail ID :
+          <input name="Email" value="" id="Email" type="email" class="validate" required>
+          <label for="xname"></label>
         </div>
       </div>
 
       <div class="row">
         <div class="input-field col s12">
-          <center><a href="add_marks.php"  class="waves-effect waves-light btn-large">Academics Entry</a></center>
+          Date of Birth :
+          <input name="Birthdate" value="" id="DATE" type="date" class="date-picker" required>
+          <label for="xname"></label>
         </div>
       </div>
 
 
       <div class="row">
         <div class="input-field col s12">
-          <center><a href="add_attendance.php"  class="waves-effect waves-light btn-large">Attendance Entry</a></center>
+          Address :
+          <textarea name="Address" id="textarea1" class="materialize-textarea" required></textarea>
+          <label for=""></label>
         </div>
       </div>
 
-<br><br><hr>
+      <p>
+      <input name="Gender" type="radio" id="test1" value="M"  required/>
+      <label for="test1">Male</label>
+    </p>
+    <p>
+      <input name="Gender" type="radio" id="test2" value="F" required/>
+      <label for="test2">Female</label>
+    </p>
 
+<br><br>
 
-      <br><br><br>
-      <form class="col s12" method="post" action="Blackboards/search.php">
-
-        <div class="row">
-
-          <div class="col s4 push-s4">
-            <center> Search for USN :</center>
-            <input name="Usn" id="xname" type="text" class="validate" required>
-            <label for="xname">USN ( University Seat Number)</label>
-          </div>
-        </div>
 
         <div class="row">
         <center>  <button class="btn waves-effect waves-light" type="submit" name="action">Submit
     <i class="material-icons right">send</i>
   </button></center>
 
-  <br><br><hr>
-
 
       </div>
     </form>
-
-<br><br>
-
-
-
-
-      </div>
-
   </div>
 <center>
 
