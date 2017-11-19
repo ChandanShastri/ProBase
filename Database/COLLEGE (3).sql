@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Nov 05, 2017 at 07:34 PM
+-- Generation Time: Nov 19, 2017 at 11:50 AM
 -- Server version: 10.1.28-MariaDB
--- PHP Version: 7.1.10
+-- PHP Version: 7.1.11
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -466,7 +466,7 @@ CREATE TABLE `STUDENT_INFO` (
   `Lname` varchar(20) DEFAULT NULL,
   `Gender` char(1) DEFAULT NULL,
   `Phone` varchar(10) DEFAULT NULL,
-  `Pphone` varchar(10) DEFAULT NULL,
+  `Email` varchar(30) DEFAULT NULL,
   `Birthdate` date NOT NULL,
   `Address` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -475,7 +475,8 @@ CREATE TABLE `STUDENT_INFO` (
 -- Dumping data for table `STUDENT_INFO`
 --
 
-INSERT INTO `STUDENT_INFO` (`Usn`, `Fname`, `Lname`, `Gender`, `Phone`, `Pphone`, `Birthdate`, `Address`) VALUES
+INSERT INTO `STUDENT_INFO` (`Usn`, `Fname`, `Lname`, `Gender`, `Phone`, `Email`, `Birthdate`, `Address`) VALUES
+('4AL15IS007', 'Chetan', 'Shastri', 'M', '9481277335', 'crshastri@gmail.com', '2017-11-08', 'Chandan Ramesh Shastri, Swarnavalli, Mathadeval, S'),
 ('4AL15IS009', 'Aditya', 'Hegde', 'M', '2147483647', '2147483647', '1997-03-11', 'kodowqdkqwkd'),
 ('4AL15IS011', 'Chandan', 'Shastri', 'M', '9487755', '8747445', '1997-03-11', 'HHHHHHH');
 
@@ -631,7 +632,9 @@ ALTER TABLE `STUDENT_ACADEMICS_SEM8`
 -- Indexes for table `STUDENT_INFO`
 --
 ALTER TABLE `STUDENT_INFO`
-  ADD PRIMARY KEY (`Usn`);
+  ADD PRIMARY KEY (`Usn`),
+  ADD UNIQUE KEY `Email` (`Email`),
+  ADD UNIQUE KEY `Phone` (`Phone`);
 
 --
 -- Constraints for dumped tables
