@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Nov 19, 2017 at 11:50 AM
+-- Generation Time: Nov 21, 2017 at 07:07 PM
 -- Server version: 10.1.28-MariaDB
 -- PHP Version: 7.1.11
 
@@ -21,6 +21,26 @@ SET time_zone = "+00:00";
 --
 -- Database: `COLLEGE`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `EVENT_LOG`
+--
+
+CREATE TABLE `EVENT_LOG` (
+  `EVENT` varchar(50) NOT NULL,
+  `MADE_BY` varchar(50) NOT NULL,
+  `TIME` datetime NOT NULL,
+  `REMARKS` varchar(30) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `EVENT_LOG`
+--
+
+INSERT INTO `EVENT_LOG` (`EVENT`, `MADE_BY`, `TIME`, `REMARKS`) VALUES
+('ADDED A NEW STUDENT', '', '2017-11-21 23:36:23', '');
 
 -- --------------------------------------------------------
 
@@ -183,6 +203,13 @@ CREATE TABLE `STUDENT_ACADEMICS_INT1` (
   `S7` int(11) DEFAULT NULL,
   `S8` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `STUDENT_ACADEMICS_INT1`
+--
+
+INSERT INTO `STUDENT_ACADEMICS_INT1` (`Usn`, `S1`, `S2`, `S3`, `S4`, `S5`, `S6`, `S7`, `S8`) VALUES
+('4AL15IS007', 12, 18, 17, 15, 11, 16, 19, 20);
 
 -- --------------------------------------------------------
 
@@ -477,8 +504,19 @@ CREATE TABLE `STUDENT_INFO` (
 
 INSERT INTO `STUDENT_INFO` (`Usn`, `Fname`, `Lname`, `Gender`, `Phone`, `Email`, `Birthdate`, `Address`) VALUES
 ('4AL15IS007', 'Chetan', 'Shastri', 'M', '9481277335', 'crshastri@gmail.com', '2017-11-08', 'Chandan Ramesh Shastri, Swarnavalli, Mathadeval, S'),
+('4AL15IS008', 'Anvaya', 'Kini', 'F', '9487555889', 'anvaya@gmail.com', '2017-11-18', 'Moodbidri'),
 ('4AL15IS009', 'Aditya', 'Hegde', 'M', '2147483647', '2147483647', '1997-03-11', 'kodowqdkqwkd'),
-('4AL15IS011', 'Chandan', 'Shastri', 'M', '9487755', '8747445', '1997-03-11', 'HHHHHHH');
+('4AL15IS011', 'Chandan', 'Shastri', 'M', '9487755', '8747445', '1997-03-11', 'HHHHHHH'),
+('4AL15IS016', 'Mythri', 'Gowda', 'F', '9731929679', 'mythrig1@gmail.com', '1997-08-04', 'Bangalore'),
+('4AL15ME412', 'Dhanush', 'Kumar', 'M', '8892173517', 'dhanushkumar.me17@gmail.com', '2017-11-16', 'Bangalore, BTM Layout');
+
+--
+-- Triggers `STUDENT_INFO`
+--
+DELIMITER $$
+CREATE TRIGGER `STUDENT_ADDITION` AFTER INSERT ON `STUDENT_INFO` FOR EACH ROW INSERT INTO EVENT_LOG(EVENT,TIME)VALUES("ADDED A NEW STUDENT",NOW())
+$$
+DELIMITER ;
 
 --
 -- Indexes for dumped tables
