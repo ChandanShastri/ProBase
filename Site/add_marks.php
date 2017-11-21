@@ -4,7 +4,7 @@
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
-    <title>ProBase | Data Entry Panel</title>
+    <title>ProBase | Marks Entry Panel</title>
 
     <!-- CSS  -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -13,79 +13,143 @@
   </head>
 
 
+
+  <nav>
+      <div class="nav-wrapper">
+        <div class="col s12">
+          <a href="index.php" class="breadcrumb">&nbsp Home</a>
+          <a href="console.php" class="breadcrumb">Console</a>
+
+        </div>
+      </div>
+    </nav>
+
+
+
+<?php
+  session_start();
+  error_reporting(0);
+  if($_SESSION['varname']=="MM")
+  {
+  echo "<script>alert(\" Successfully Inserted Marks..! \\n Add Next One..! \")</script>";
+
+  }
+  session_destroy();
+  ?>
+
+
+
+
+
+  <script>
+  $(document).ready(function() {
+  $('select').material_select();
+  });
+  </script>
+
 <!-- DATA ENTRY  -->
 <div class="container">
   <br><br>
-<center><h3> Welcome to Data Entry Panel <h3></center>
+<center><h3> Internal Marks Entry Panel <h3></center>
 <br><br>
 
 
 
 
   <div class="row">
-    <form class="col s12" method="post" action="Blackboards/blackboard1.php">
+    <form class="col s12" method="post" action="Blackboards/marks.php">
 
       <div class="row">
-        <div class="input-field col s12">
+        <div class="input-field col s4">
           USN :
-          <input name="Usn" id="xname" type="text" class="validate" required>
+          <input name="usn" id="xname" type="text" class="validate" size="10" required>
           <label for="xname"></label>
         </div>
       </div>
       <div class="row">
-        <div class="input-field col s6">
-          Name :
-          <input placeholder="" name="Fname" id="first_name" type="text" class="validate" required>
-          <label for="first_name"></label>
+        <div class="input-field col s3">
+          Select Semester ( 1 - 8) :
+          <input name="sem" id="xname" type="number" class="validate" min="1" max="8" required>
+          <label for="xname"></label>
         </div>
-        <div class="input-field col s6">
-          Last Name :
-          <input name="Lname" id="last_name" type="text" class="validate" required>
-          <label for="last_name"></label>
-        </div>
-      </div>
-      <div class="row">
-        <div class="input-field col s12">
-          Phone :
-          <input name="Phone" value="" id="Phone" type="number" class="validate" required>
+        <div class="input-field col s3">
+          Select Internals ( 1 - 3 ) :
+          <input name="int" id="xname" type="number" class="validate" min="1" max="3" required>
           <label for="xname"></label>
         </div>
       </div>
 
+<hr><br><br>
       <div class="row">
-        <div class="input-field col s12">
-          E-mail ID :
-          <input name="Email" value="" id="Email" type="email" class="validate" required>
-          <label for="xname"></label>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="input-field col s12">
-          Date of Birth :
-          <input name="Birthdate" value="" id="DATE" type="date" class="date-picker" required>
+        <div class="input-field col s3">
+          Subject 1 Marks ( 0 - 20 ) :
+          <input name="int1" id="xname" type="number" class="validate" min="0" max="20" required>
           <label for="xname"></label>
         </div>
       </div>
 
 
       <div class="row">
-        <div class="input-field col s12">
-          Address :
-          <textarea name="Address" id="textarea1" class="materialize-textarea" required></textarea>
-          <label for=""></label>
+        <div class="input-field col s3">
+          Subject 2 Marks ( 0 - 20 ) :
+          <input name="int2" id="xname" type="number" class="validate" min="0" max="20" required>
+          <label for="xname"></label>
         </div>
       </div>
 
-      <p>
-      <input name="Gender" type="radio" id="test1" value="M"  required/>
-      <label for="test1">Male</label>
-    </p>
-    <p>
-      <input name="Gender" type="radio" id="test2" value="F" required/>
-      <label for="test2">Female</label>
-    </p>
+      <div class="row">
+        <div class="input-field col s3">
+          Subject 3 Marks ( 0 - 20 ) :
+          <input name="int3" id="xname" type="number" class="validate" min="0" max="20" required>
+          <label for="xname"></label>
+        </div>
+      </div>
 
+      <div class="row">
+        <div class="input-field col s3">
+          Subject 4 Marks ( 0 - 20 ) :
+          <input name="int4" id="xname" type="number" class="validate" min="0" max="20" required>
+          <label for="xname"></label>
+        </div>
+      </div>
+
+
+
+      <div class="row">
+        <div class="input-field col s3">
+          Subject 5 Marks ( 0 - 20 ) :
+          <input name="int5" id="xname" type="number" class="validate" min="0" max="20" required>
+          <label for="xname"></label>
+        </div>
+      </div>
+
+
+      <div class="row">
+        <div class="input-field col s3">
+          Subject 6 Marks ( 0 - 20 ) :
+          <input name="int6" id="xname" type="number" class="validate" min="0" max="20" required>
+          <label for="xname"></label>
+        </div>
+      </div>
+
+
+
+      <div class="row">
+        <div class="input-field col s3">
+          Subject 7 Marks ( 0 - 20 ) :
+          <input name="int7" id="xname" type="number" class="validate" min="0" max="20" required>
+          <label for="xname"></label>
+        </div>
+      </div>
+
+
+      <div class="row">
+        <div class="input-field col s3">
+          Subject 8 Marks ( 0 - 20 ) :
+          <input name="int8" id="xname" type="number" class="validate" min="0" max="20" required>
+          <label for="xname"></label>
+        </div>
+      </div>
 <br><br>
 
 

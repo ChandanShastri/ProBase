@@ -12,7 +12,15 @@
     <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   </head>
 
+  <nav>
+      <div class="nav-wrapper">
+        <div class="col s12">
+          <a href="index.php" class="breadcrumb">&nbsp Home</a>
+          <a href="console.php" class="breadcrumb">Console</a>
 
+        </div>
+      </div>
+    </nav>
   <script>
   $(document).ready(function() {
   $('select').material_select();
@@ -23,7 +31,7 @@
 <!-- DATA ENTRY  -->
 <div class="container">
   <br><br>
-<center><h3> Welcome to Data Entry Panel <h3></center>
+<center><div class="blue-text"><h3> Welcome to Data Entry Panel <h3></div></center>
 <br><br>
 
 
@@ -106,13 +114,14 @@
 
 </div>
 </div>
+<!---
 <select name="cars" class="browser-default">
   <option value="volvo">Volvo</option>
   <option value="saab">Saab</option>
   <option value="fiat">Fiat</option>
   <option value="audi">Audi</option>
 </select>
-
+-->
 <br><br>
         <div class="row">
         <center>  <button class="btn waves-effect waves-light" type="submit" name="action">Submit

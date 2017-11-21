@@ -41,7 +41,7 @@ $result = $con->query($sql);
 if ($result->num_rows > 0) {
     // output data of each row
     echo "<div ><table border=\"0\" class=\"centered\"><tbody><thead><tr>
-    <th>Usn</th>
+    <th>USN</th>
     <th>First Name</th>
     <th>Last Name</th>
     <th>Gender</th>

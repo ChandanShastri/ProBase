@@ -48,8 +48,8 @@ $result = $con->query($sql);
 
 if ($result->num_rows > 0) {
     // output data of each row
-    echo "<div class='container'><table border=\"0\"><tbody><thead><tr>
-    <th>Usn</th>
+    echo "<table border=\"0\" class=\"centered\"><tbody><thead><tr>
+    <th>USN</th>
     <th>First Name</th>
     <th>Last Name</th>
     <th>Gender</th>
@@ -61,7 +61,7 @@ if ($result->num_rows > 0) {
     while($row = $result->fetch_assoc()) {
         echo "<tr>"."<td>".$row["Usn"]."</td><td>" . $row["Fname"]. "</td><td>" . $row["Lname"]."</td><td>" . $row["Gender"]."</td><td>" . $row["Birthdate"]."</td><td>" . $row["Phone"]."</td><td>" . $row["Email"]."</td><td>".$row["Address"]."</td></tr>";
     }
-    echo "</tbody></table></div>";
+    echo "</tbody></table>";
 } else {
     echo "0 results";
 }
