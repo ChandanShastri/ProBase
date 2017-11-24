@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Nov 21, 2017 at 07:07 PM
+-- Generation Time: Nov 24, 2017 at 07:05 PM
 -- Server version: 10.1.28-MariaDB
 -- PHP Version: 7.1.11
 
@@ -21,6 +21,17 @@ SET time_zone = "+00:00";
 --
 -- Database: `COLLEGE`
 --
+
+DELIMITER $$
+--
+-- Procedures
+--
+CREATE DEFINER=`root`@`localhost` PROCEDURE `CLEAR_LOGS` ()  NO SQL
+BEGIN
+DELETE FROM EVENT_LOG;
+END$$
+
+DELIMITER ;
 
 -- --------------------------------------------------------
 
