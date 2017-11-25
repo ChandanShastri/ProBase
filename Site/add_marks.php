@@ -40,12 +40,15 @@
 
 
 
+  <script src="js/jquery-3.2.1.min.js"></script>
+      <script src="js/materialize.js"></script>
+      <script src="js/init.js"></script>
+      <script type="text/javascript">
+      $(document).ready(function() {
+        $('select').material_select();
+      });
 
-  <script>
-  $(document).ready(function() {
-  $('select').material_select();
-  });
-  </script>
+      </script>
 
 <!-- DATA ENTRY  -->
 <div class="container">
@@ -62,20 +65,35 @@
       <div class="row">
         <div class="input-field col s4">
           USN :
-          <input name="usn" id="xname" type="text" class="validate" size="10" required>
+          <input name="usn" id="xname" type="text" class="validate" pattern=".{10,10}" required title="INVALID USN" required >
           <label for="xname"></label>
         </div>
       </div>
+
+
       <div class="row">
         <div class="input-field col s3">
           Select Semester ( 1 - 8) :
-          <input name="sem" id="xname" type="number" class="validate" min="1" max="8" required>
-          <label for="xname"></label>
+          <select name="sem" required>
+            <option value="1">SEM - 1</option>
+            <option value="2">SEM - 2</option>
+            <option value="3">SEM - 3</option>
+            <option value="4">SEM - 4</option>
+            <option value="5">SEM - 5</option>
+            <option value="6">SEM - 6</option>
+            <option value="7">SEM - 7</option>
+            <option value="8">SEM - 8</option>
+          </select>
         </div>
+
         <div class="input-field col s3">
           Select Internals ( 1 - 3 ) :
-          <input name="int" id="xname" type="number" class="validate" min="1" max="3" required>
-          <label for="xname"></label>
+        <select name="int" required>
+          <option value="1"> I - Internals</option>
+          <option value="2"> II - Internals</option>
+          <option value="3"> III - Internals</option>
+        </select>
+
         </div>
       </div>
 
