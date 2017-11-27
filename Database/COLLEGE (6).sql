@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Nov 24, 2017 at 07:05 PM
+-- Generation Time: Nov 27, 2017 at 06:07 PM
 -- Server version: 10.1.28-MariaDB
 -- PHP Version: 7.1.11
 
@@ -205,22 +205,39 @@ CREATE TABLE `STUDENT_ACADEMICS_ATTS8` (
 
 CREATE TABLE `STUDENT_ACADEMICS_INT1` (
   `Usn` varchar(10) NOT NULL,
-  `S1` int(11) DEFAULT NULL,
-  `S2` int(11) DEFAULT NULL,
-  `S3` int(11) DEFAULT NULL,
-  `S4` int(11) DEFAULT NULL,
-  `S5` int(11) DEFAULT NULL,
-  `S6` int(11) DEFAULT NULL,
-  `S7` int(11) DEFAULT NULL,
-  `S8` int(11) DEFAULT NULL
+  `1S1` int(11) DEFAULT NULL,
+  `1S2` int(11) DEFAULT NULL,
+  `1S3` int(11) DEFAULT NULL,
+  `1S4` int(11) DEFAULT NULL,
+  `1S5` int(11) DEFAULT NULL,
+  `1S6` int(11) DEFAULT NULL,
+  `1S7` int(11) DEFAULT NULL,
+  `1S8` int(11) DEFAULT NULL,
+  `2S1` int(11) DEFAULT NULL,
+  `2S2` int(11) DEFAULT NULL,
+  `2S3` int(11) DEFAULT NULL,
+  `2S4` int(11) DEFAULT NULL,
+  `2S5` int(11) DEFAULT NULL,
+  `2S6` int(11) DEFAULT NULL,
+  `2S7` int(11) DEFAULT NULL,
+  `2S8` int(11) DEFAULT NULL,
+  `3S1` int(11) DEFAULT NULL,
+  `3S2` int(11) DEFAULT NULL,
+  `3S3` int(11) DEFAULT NULL,
+  `3S4` int(11) DEFAULT NULL,
+  `3S5` int(11) DEFAULT NULL,
+  `3S6` int(11) DEFAULT NULL,
+  `3S7` int(11) DEFAULT NULL,
+  `3S8` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `STUDENT_ACADEMICS_INT1`
 --
 
-INSERT INTO `STUDENT_ACADEMICS_INT1` (`Usn`, `S1`, `S2`, `S3`, `S4`, `S5`, `S6`, `S7`, `S8`) VALUES
-('4AL15IS007', 12, 18, 17, 15, 11, 16, 19, 20);
+INSERT INTO `STUDENT_ACADEMICS_INT1` (`Usn`, `1S1`, `1S2`, `1S3`, `1S4`, `1S5`, `1S6`, `1S7`, `1S8`, `2S1`, `2S2`, `2S3`, `2S4`, `2S5`, `2S6`, `2S7`, `2S8`, `3S1`, `3S2`, `3S3`, `3S4`, `3S5`, `3S6`, `3S7`, `3S8`) VALUES
+('4AL15IS007', 11, 12, 13, 14, 15, 16, 17, 18, 1, 2, 3, 4, 5, 6, 7, 8, 10, 11, 11, 11, 11, 11, 11, 11),
+('4AL15IS008', 11, 11, 11, 11, 11, 11, 11, 11, 20, 1, 0, 0, 0, 0, 0, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -230,14 +247,30 @@ INSERT INTO `STUDENT_ACADEMICS_INT1` (`Usn`, `S1`, `S2`, `S3`, `S4`, `S5`, `S6`,
 
 CREATE TABLE `STUDENT_ACADEMICS_INT2` (
   `Usn` varchar(10) NOT NULL,
-  `S1` int(11) DEFAULT NULL,
-  `S2` int(11) DEFAULT NULL,
-  `S3` int(11) DEFAULT NULL,
-  `S4` int(11) DEFAULT NULL,
-  `S5` int(11) DEFAULT NULL,
-  `S6` int(11) DEFAULT NULL,
-  `S7` int(11) DEFAULT NULL,
-  `S8` int(11) DEFAULT NULL
+  `1S1` int(11) DEFAULT NULL,
+  `1S2` int(11) DEFAULT NULL,
+  `1S3` int(11) DEFAULT NULL,
+  `1S4` int(11) DEFAULT NULL,
+  `1S5` int(11) DEFAULT NULL,
+  `1S6` int(11) DEFAULT NULL,
+  `1S7` int(11) DEFAULT NULL,
+  `1S8` int(11) DEFAULT NULL,
+  `2S1` int(11) DEFAULT NULL,
+  `2S2` int(11) DEFAULT NULL,
+  `2S3` int(11) DEFAULT NULL,
+  `2S4` int(11) DEFAULT NULL,
+  `2S5` int(11) DEFAULT NULL,
+  `2S6` int(11) DEFAULT NULL,
+  `2S7` int(11) DEFAULT NULL,
+  `2S8` int(11) DEFAULT NULL,
+  `3S1` int(11) DEFAULT NULL,
+  `3S2` int(11) DEFAULT NULL,
+  `3S3` int(11) DEFAULT NULL,
+  `3S4` int(11) DEFAULT NULL,
+  `3S5` int(11) DEFAULT NULL,
+  `3S6` int(11) DEFAULT NULL,
+  `3S7` int(11) DEFAULT NULL,
+  `3S8` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -248,14 +281,30 @@ CREATE TABLE `STUDENT_ACADEMICS_INT2` (
 
 CREATE TABLE `STUDENT_ACADEMICS_INT3` (
   `Usn` varchar(10) NOT NULL,
-  `S1` int(11) DEFAULT NULL,
-  `S2` int(11) DEFAULT NULL,
-  `S3` int(11) DEFAULT NULL,
-  `S4` int(11) DEFAULT NULL,
-  `S5` int(11) DEFAULT NULL,
-  `S6` int(11) DEFAULT NULL,
-  `S7` int(11) DEFAULT NULL,
-  `S8` int(11) DEFAULT NULL
+  `1S1` int(11) DEFAULT NULL,
+  `1S2` int(11) DEFAULT NULL,
+  `1S3` int(11) DEFAULT NULL,
+  `1S4` int(11) DEFAULT NULL,
+  `1S5` int(11) DEFAULT NULL,
+  `1S6` int(11) DEFAULT NULL,
+  `1S7` int(11) DEFAULT NULL,
+  `1S8` int(11) DEFAULT NULL,
+  `2S1` int(11) DEFAULT NULL,
+  `2S2` int(11) DEFAULT NULL,
+  `2S3` int(11) DEFAULT NULL,
+  `2S4` int(11) DEFAULT NULL,
+  `2S5` int(11) DEFAULT NULL,
+  `2S6` int(11) DEFAULT NULL,
+  `2S7` int(11) DEFAULT NULL,
+  `2S8` int(11) DEFAULT NULL,
+  `3S1` int(11) DEFAULT NULL,
+  `3S2` int(11) DEFAULT NULL,
+  `3S3` int(11) DEFAULT NULL,
+  `3S4` int(11) DEFAULT NULL,
+  `3S5` int(11) DEFAULT NULL,
+  `3S6` int(11) DEFAULT NULL,
+  `3S7` int(11) DEFAULT NULL,
+  `3S8` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -266,14 +315,30 @@ CREATE TABLE `STUDENT_ACADEMICS_INT3` (
 
 CREATE TABLE `STUDENT_ACADEMICS_INT4` (
   `Usn` varchar(10) NOT NULL,
-  `S1` int(11) DEFAULT NULL,
-  `S2` int(11) DEFAULT NULL,
-  `S3` int(11) DEFAULT NULL,
-  `S4` int(11) DEFAULT NULL,
-  `S5` int(11) DEFAULT NULL,
-  `S6` int(11) DEFAULT NULL,
-  `S7` int(11) DEFAULT NULL,
-  `S8` int(11) DEFAULT NULL
+  `1S1` int(11) DEFAULT NULL,
+  `1S2` int(11) DEFAULT NULL,
+  `1S3` int(11) DEFAULT NULL,
+  `1S4` int(11) DEFAULT NULL,
+  `1S5` int(11) DEFAULT NULL,
+  `1S6` int(11) DEFAULT NULL,
+  `1S7` int(11) DEFAULT NULL,
+  `1S8` int(11) DEFAULT NULL,
+  `2S1` int(11) DEFAULT NULL,
+  `2S2` int(11) DEFAULT NULL,
+  `2S3` int(11) DEFAULT NULL,
+  `2S4` int(11) DEFAULT NULL,
+  `2S5` int(11) DEFAULT NULL,
+  `2S6` int(11) DEFAULT NULL,
+  `2S7` int(11) DEFAULT NULL,
+  `2S8` int(11) DEFAULT NULL,
+  `3S1` int(11) DEFAULT NULL,
+  `3S2` int(11) DEFAULT NULL,
+  `3S3` int(11) DEFAULT NULL,
+  `3S4` int(11) DEFAULT NULL,
+  `3S5` int(11) DEFAULT NULL,
+  `3S6` int(11) DEFAULT NULL,
+  `3S7` int(11) DEFAULT NULL,
+  `3S8` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -284,14 +349,30 @@ CREATE TABLE `STUDENT_ACADEMICS_INT4` (
 
 CREATE TABLE `STUDENT_ACADEMICS_INT5` (
   `Usn` varchar(10) NOT NULL,
-  `S1` int(11) DEFAULT NULL,
-  `S2` int(11) DEFAULT NULL,
-  `S3` int(11) DEFAULT NULL,
-  `S4` int(11) DEFAULT NULL,
-  `S5` int(11) DEFAULT NULL,
-  `S6` int(11) DEFAULT NULL,
-  `S7` int(11) DEFAULT NULL,
-  `S8` int(11) DEFAULT NULL
+  `1S1` int(11) DEFAULT NULL,
+  `1S2` int(11) DEFAULT NULL,
+  `1S3` int(11) DEFAULT NULL,
+  `1S4` int(11) DEFAULT NULL,
+  `1S5` int(11) DEFAULT NULL,
+  `1S6` int(11) DEFAULT NULL,
+  `1S7` int(11) DEFAULT NULL,
+  `1S8` int(11) DEFAULT NULL,
+  `2S1` int(11) DEFAULT NULL,
+  `2S2` int(11) DEFAULT NULL,
+  `2S3` int(11) DEFAULT NULL,
+  `2S4` int(11) DEFAULT NULL,
+  `2S5` int(11) DEFAULT NULL,
+  `2S6` int(11) DEFAULT NULL,
+  `2S7` int(11) DEFAULT NULL,
+  `2S8` int(11) DEFAULT NULL,
+  `3S1` int(11) DEFAULT NULL,
+  `3S2` int(11) DEFAULT NULL,
+  `3S3` int(11) DEFAULT NULL,
+  `3S4` int(11) DEFAULT NULL,
+  `3S5` int(11) DEFAULT NULL,
+  `3S6` int(11) DEFAULT NULL,
+  `3S7` int(11) DEFAULT NULL,
+  `3S8` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -302,14 +383,30 @@ CREATE TABLE `STUDENT_ACADEMICS_INT5` (
 
 CREATE TABLE `STUDENT_ACADEMICS_INT6` (
   `Usn` varchar(10) NOT NULL,
-  `S1` int(11) DEFAULT NULL,
-  `S2` int(11) DEFAULT NULL,
-  `S3` int(11) DEFAULT NULL,
-  `S4` int(11) DEFAULT NULL,
-  `S5` int(11) DEFAULT NULL,
-  `S6` int(11) DEFAULT NULL,
-  `S7` int(11) DEFAULT NULL,
-  `S8` int(11) DEFAULT NULL
+  `1S1` int(11) DEFAULT NULL,
+  `1S2` int(11) DEFAULT NULL,
+  `1S3` int(11) DEFAULT NULL,
+  `1S4` int(11) DEFAULT NULL,
+  `1S5` int(11) DEFAULT NULL,
+  `1S6` int(11) DEFAULT NULL,
+  `1S7` int(11) DEFAULT NULL,
+  `1S8` int(11) DEFAULT NULL,
+  `2S1` int(11) DEFAULT NULL,
+  `2S2` int(11) DEFAULT NULL,
+  `2S3` int(11) DEFAULT NULL,
+  `2S4` int(11) DEFAULT NULL,
+  `2S5` int(11) DEFAULT NULL,
+  `2S6` int(11) DEFAULT NULL,
+  `2S7` int(11) DEFAULT NULL,
+  `2S8` int(11) DEFAULT NULL,
+  `3S1` int(11) DEFAULT NULL,
+  `3S2` int(11) DEFAULT NULL,
+  `3S3` int(11) DEFAULT NULL,
+  `3S4` int(11) DEFAULT NULL,
+  `3S5` int(11) DEFAULT NULL,
+  `3S6` int(11) DEFAULT NULL,
+  `3S7` int(11) DEFAULT NULL,
+  `3S8` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -320,14 +417,30 @@ CREATE TABLE `STUDENT_ACADEMICS_INT6` (
 
 CREATE TABLE `STUDENT_ACADEMICS_INT7` (
   `Usn` varchar(10) NOT NULL,
-  `S1` int(11) DEFAULT NULL,
-  `S2` int(11) DEFAULT NULL,
-  `S3` int(11) DEFAULT NULL,
-  `S4` int(11) DEFAULT NULL,
-  `S5` int(11) DEFAULT NULL,
-  `S6` int(11) DEFAULT NULL,
-  `S7` int(11) DEFAULT NULL,
-  `S8` int(11) DEFAULT NULL
+  `1S1` int(11) DEFAULT NULL,
+  `1S2` int(11) DEFAULT NULL,
+  `1S3` int(11) DEFAULT NULL,
+  `1S4` int(11) DEFAULT NULL,
+  `1S5` int(11) DEFAULT NULL,
+  `1S6` int(11) DEFAULT NULL,
+  `1S7` int(11) DEFAULT NULL,
+  `1S8` int(11) DEFAULT NULL,
+  `2S1` int(11) DEFAULT NULL,
+  `2S2` int(11) DEFAULT NULL,
+  `2S3` int(11) DEFAULT NULL,
+  `2S4` int(11) DEFAULT NULL,
+  `2S5` int(11) DEFAULT NULL,
+  `2S6` int(11) DEFAULT NULL,
+  `2S7` int(11) DEFAULT NULL,
+  `2S8` int(11) DEFAULT NULL,
+  `3S1` int(11) DEFAULT NULL,
+  `3S2` int(11) DEFAULT NULL,
+  `3S3` int(11) DEFAULT NULL,
+  `3S4` int(11) DEFAULT NULL,
+  `3S5` int(11) DEFAULT NULL,
+  `3S6` int(11) DEFAULT NULL,
+  `3S7` int(11) DEFAULT NULL,
+  `3S8` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -338,14 +451,30 @@ CREATE TABLE `STUDENT_ACADEMICS_INT7` (
 
 CREATE TABLE `STUDENT_ACADEMICS_INT8` (
   `Usn` varchar(10) NOT NULL,
-  `S1` int(11) DEFAULT NULL,
-  `S2` int(11) DEFAULT NULL,
-  `S3` int(11) DEFAULT NULL,
-  `S4` int(11) DEFAULT NULL,
-  `S5` int(11) DEFAULT NULL,
-  `S6` int(11) DEFAULT NULL,
-  `S7` int(11) DEFAULT NULL,
-  `S8` int(11) DEFAULT NULL
+  `1S1` int(11) DEFAULT NULL,
+  `1S2` int(11) DEFAULT NULL,
+  `1S3` int(11) DEFAULT NULL,
+  `1S4` int(11) DEFAULT NULL,
+  `1S5` int(11) DEFAULT NULL,
+  `1S6` int(11) DEFAULT NULL,
+  `1S7` int(11) DEFAULT NULL,
+  `1S8` int(11) DEFAULT NULL,
+  `2S1` int(11) DEFAULT NULL,
+  `2S2` int(11) DEFAULT NULL,
+  `2S3` int(11) DEFAULT NULL,
+  `2S4` int(11) DEFAULT NULL,
+  `2S5` int(11) DEFAULT NULL,
+  `2S6` int(11) DEFAULT NULL,
+  `2S7` int(11) DEFAULT NULL,
+  `2S8` int(11) DEFAULT NULL,
+  `3S1` int(11) DEFAULT NULL,
+  `3S2` int(11) DEFAULT NULL,
+  `3S3` int(11) DEFAULT NULL,
+  `3S4` int(11) DEFAULT NULL,
+  `3S5` int(11) DEFAULT NULL,
+  `3S6` int(11) DEFAULT NULL,
+  `3S7` int(11) DEFAULT NULL,
+  `3S8` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------

@@ -6,8 +6,16 @@
     <title>Chandan Shastri's Home</title>
     <meta name="description" content="360&deg; Image - A-Frame">
     <script src="js/aframe.min.js"></script>
+    <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+
   </head>
   <body>
+    <div class="progress">
+      <div class="indeterminate"></div>
+  </div>
+
+
     <a-scene>
       <a-sky src="imgs/vr1.jpg" rotation="0 -130 0"></a-sky>
 

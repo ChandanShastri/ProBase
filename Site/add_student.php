@@ -31,7 +31,7 @@
 <!-- DATA ENTRY  -->
 <div class="container">
   <br><br>
-<center><div class="blue-text"><h3> Welcome to Data Entry Panel <h3></div></center>
+<center><div class="blue-text"><h3> Student Data Entry Panel <h3></div></center>
 <br><br>
 
 
@@ -41,7 +41,7 @@
     <form class="col s12" method="post" action="Blackboards/blackboard1.php">
 
       <div class="row">
-        <div class="input-field col s12">
+        <div class="input-field col s4">
           USN :
           <input name="Usn" id="xname" type="text" class="validate" required>
           <label for="xname"></label>
@@ -114,15 +114,12 @@
 
 </div>
 </div>
-<!---
-<select name="cars" class="browser-default">
-  <option value="volvo">Volvo</option>
-  <option value="saab">Saab</option>
-  <option value="fiat">Fiat</option>
-  <option value="audi">Audi</option>
-</select>
--->
 <br><br>
+<center>
+<input type="checkbox" id="test5" required >
+<label for="test5">I have Verified that All the Data entered above is Correct.</label>
+</center><br><br>
+
         <div class="row">
         <center>  <button class="btn waves-effect waves-light" type="submit" name="action">Submit
     <i class="material-icons right">send</i>

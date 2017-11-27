@@ -34,6 +34,10 @@
   echo "<script>alert(\" Successfully Inserted Marks..! \\n Add Next One..! \")</script>";
 
   }
+  else if($_SESSION['varname']=="USNERR")
+  {
+    echo "<script>alert(\" USN Doesn't Exist in Database..! \\n Please Verify it Once Again..! \")</script>";
+  }
   session_destroy();
   ?>
 
@@ -53,27 +57,46 @@
 <!-- DATA ENTRY  -->
 <div class="container">
   <br><br>
-<center><h3> Internal Marks Entry Panel <h3></center>
+<center><h3 class="red-text"> Internal Marks Entry Panel </h3></center>
 <br><br>
 
 
 
 
-  <div class="row">
+
     <form class="col s12" method="post" action="Blackboards/marks.php">
+      <left><h6 class="blue-text"><b> Enter University Serial Number ( USN ) :</b></h6></left><br>
+        <div class="card-panel orange lighten-4">
+        <div class="input-field col s14">
+          USN :&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp   <b>4AL</b>
+          <div class="input-field inline s3">
+            <input name="usnb" placeholder="15" id="xname" type="number" class="validate" min="13" max="20" required>
+          </div>
+          <div class="input-field inline col s2">
 
-      <div class="row">
-        <div class="input-field col s4">
-          USN :
-          <input name="usn" id="xname" type="text" class="validate" pattern=".{10,10}" required title="INVALID USN" required >
+            <select name="branch" required >
+              <option value="IS">ISE</option>
+              <option value="CS">CSE</option>
+              <option value="EC">ECE</option>
+              <option value="CV">CIVIL</option>
+              <option value="ME">MECH</option>
+            </select></div>
+
+            <div class="input-field inline ">
+              <input name="usnno" placeholder="001" id="xname" type="number" class="validate" min="1" max="500" required>
+            </div>
           <label for="xname"></label>
-        </div>
-      </div>
+        </div></div>
+        <br>
+
+<hr><br>
 
 
+  <left><h6 class="blue-text"><b> Select Semester and Internal Exam :</b> </h6></left><br>
+  <div class="card-panel orange lighten-4">
       <div class="row">
-        <div class="input-field col s3">
-          Select Semester ( 1 - 8) :
+          <div class="input-field col s3">
+          <h7 class="red-text">Select Semester  :</h7>
           <select name="sem" required>
             <option value="1">SEM - 1</option>
             <option value="2">SEM - 2</option>
@@ -87,7 +110,7 @@
         </div>
 
         <div class="input-field col s3">
-          Select Internals ( 1 - 3 ) :
+          <h7 class="red-text">Select Internals  :</h7>
         <select name="int" required>
           <option value="1"> I - Internals</option>
           <option value="2"> II - Internals</option>
@@ -95,56 +118,60 @@
         </select>
 
         </div>
-      </div>
+      </div></div><br><br>
 
 <hr><br><br>
-      <div class="row">
-        <div class="input-field col s3">
-          Subject 1 Marks ( 0 - 20 ) :
+
+
+      <center><h5 class="red-text"><b> Enter the Marks as per the Subject </b> </h5></center><br>
+      <div class="card-panel orange lighten-4">
+      <center>
+      <div class="row"><b>Subject 1 Marks ( 0 - 20 ) :</b>&nbsp &nbsp
+        <div class="input-field inline">
           <input name="int1" id="xname" type="number" class="validate" min="0" max="20" required>
           <label for="xname"></label>
         </div>
-      </div>
 
 
-      <div class="row">
-        <div class="input-field col s3">
-          Subject 2 Marks ( 0 - 20 ) :
+
+        <b>&nbsp &nbsp&nbsp &nbsp&nbsp &nbspSubject 2 Marks ( 0 - 20 ) :</b>&nbsp &nbsp
+        <div class="input-field inline">
+
           <input name="int2" id="xname" type="number" class="validate" min="0" max="20" required>
           <label for="xname"></label>
         </div>
       </div>
 
-      <div class="row">
-        <div class="input-field col s3">
-          Subject 3 Marks ( 0 - 20 ) :
+
+
+      <div class="row"><b>Subject 3 Marks ( 0 - 20 ) :</b>&nbsp &nbsp
+        <div class="input-field inline">
           <input name="int3" id="xname" type="number" class="validate" min="0" max="20" required>
           <label for="xname"></label>
         </div>
-      </div>
 
-      <div class="row">
-        <div class="input-field col s3">
-          Subject 4 Marks ( 0 - 20 ) :
+
+
+        <b>&nbsp &nbsp&nbsp &nbsp&nbsp &nbspSubject 4 Marks ( 0 - 20 ) :</b>&nbsp &nbsp
+        <div class="input-field inline">
+
           <input name="int4" id="xname" type="number" class="validate" min="0" max="20" required>
           <label for="xname"></label>
         </div>
       </div>
 
 
-
-      <div class="row">
-        <div class="input-field col s3">
-          Subject 5 Marks ( 0 - 20 ) :
+      <div class="row"><b>Subject 5 Marks ( 0 - 20 ) :</b>&nbsp &nbsp
+        <div class="input-field inline">
           <input name="int5" id="xname" type="number" class="validate" min="0" max="20" required>
           <label for="xname"></label>
         </div>
-      </div>
 
 
-      <div class="row">
-        <div class="input-field col s3">
-          Subject 6 Marks ( 0 - 20 ) :
+
+        <b>&nbsp &nbsp&nbsp &nbsp&nbsp &nbspSubject 6 Marks ( 0 - 20 ) :</b>&nbsp &nbsp
+        <div class="input-field inline">
+
           <input name="int6" id="xname" type="number" class="validate" min="0" max="20" required>
           <label for="xname"></label>
         </div>
@@ -152,23 +179,30 @@
 
 
 
-      <div class="row">
-        <div class="input-field col s3">
-          Subject 7 Marks ( 0 - 20 ) :
+      <div class="row"><b>Subject 7 Marks ( 0 - 20 ) :</b>&nbsp &nbsp
+        <div class="input-field inline">
           <input name="int7" id="xname" type="number" class="validate" min="0" max="20" required>
           <label for="xname"></label>
         </div>
-      </div>
 
 
-      <div class="row">
-        <div class="input-field col s3">
-          Subject 8 Marks ( 0 - 20 ) :
+
+        <b>&nbsp &nbsp&nbsp &nbsp&nbsp &nbspSubject 8 Marks ( 0 - 20 ) :</b>&nbsp &nbsp
+        <div class="input-field inline">
+
           <input name="int8" id="xname" type="number" class="validate" min="0" max="20" required>
           <label for="xname"></label>
         </div>
       </div>
+
+    </center>
+
+</div>
 <br><br>
+<center>
+<input type="checkbox" id="test5" required>
+<label for="test5">I have Verified that All the Data entered above is Correct.</label>
+</center><br><br>
 
 
         <div class="row">
@@ -179,7 +213,7 @@
 
       </div>
     </form>
-  </div>
+
 <center>
 
 

@@ -31,8 +31,25 @@
   echo "<script>alert(\" Student Registration Successful..! \\n Add the Additional Info for this Student now..! \")</script>";
 
   }
+  else if($_SESSION['varname']=="USNERR")
+  {
+    echo "<script>alert(\" USN Doesn't Exist in Database..! \\n Please Verify it Once Again..! \")</script>";
+  }
   session_destroy();
   ?>
+
+  <script src="js/jquery-3.2.1.min.js"></script>
+      <script src="js/materialize.js"></script>
+      <script src="js/init.js"></script>
+      <script type="text/javascript">
+      $(document).ready(function() {
+        $('select').material_select();
+      });
+
+      </script>
+
+
+
 
 
 
@@ -80,20 +97,36 @@
 
       <br><br><br>
       <form class="col s12" method="post" action="Blackboards/search.php">
-
+<center><center><h5 class="red-text"> ProBase Search </h5></center><br>
+<div class="card-panel orange lighten-4"><br>
         <div class="row">
 
-          <div class="col s4 push-s4">
-            <center> Search for USN :</center>
+          <div class="input-field inline col s3 push-s3">
+            <center> <h7 class="red-text">Enter USN  :</h7></center>
             <input name="Usn" id="xname" type="text" class="validate" required>
-            <label for="xname">USN ( University Seat Number)</label>
+
           </div>
-        </div>
+
+
+              <div class="input-field inline col s3 push-s3">
+              <h7 class="red-text">Select Semester  :</h7>
+              <select name="sem" required>
+                <option value="1">SEM - 1</option>
+                <option value="2">SEM - 2</option>
+                <option value="3">SEM - 3</option>
+                <option value="4">SEM - 4</option>
+                <option value="5">SEM - 5</option>
+                <option value="6">SEM - 6</option>
+                <option value="7">SEM - 7</option>
+                <option value="8">SEM - 8</option>
+              </select>
+            </div>
+        </div></center><br>
 
         <div class="row">
         <center>  <button class="btn waves-effect waves-light" type="submit" name="action">Submit
     <i class="material-icons right">send</i>
-  </button></center>
+  </button></center></div>
 
   <br><br><hr>
 
