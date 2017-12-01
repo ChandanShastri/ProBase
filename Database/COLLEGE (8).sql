@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Nov 27, 2017 at 06:38 PM
+-- Generation Time: Dec 01, 2017 at 04:37 PM
 -- Server version: 10.1.28-MariaDB
 -- PHP Version: 7.1.11
 
@@ -51,7 +51,8 @@ CREATE TABLE `EVENT_LOG` (
 --
 
 INSERT INTO `EVENT_LOG` (`EVENT`, `MADE_BY`, `TIME`, `REMARKS`) VALUES
-('ADDED A NEW STUDENT', '', '2017-11-21 23:36:23', '');
+('ADDED A NEW STUDENT', '', '2017-11-21 23:36:23', ''),
+('ADDED A NEW STUDENT', '', '2017-12-01 20:47:41', '');
 
 -- --------------------------------------------------------
 
@@ -86,6 +87,14 @@ CREATE TABLE `STUDENT_ACADEMICS_ATT1` (
   `3S7` int(11) DEFAULT NULL,
   `3S8` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `STUDENT_ACADEMICS_ATT1`
+--
+
+INSERT INTO `STUDENT_ACADEMICS_ATT1` (`Usn`, `1S1`, `1S2`, `1S3`, `1S4`, `1S5`, `1S6`, `1S7`, `1S8`, `2S1`, `2S2`, `2S3`, `2S4`, `2S5`, `2S6`, `2S7`, `2S8`, `3S1`, `3S2`, `3S3`, `3S4`, `3S5`, `3S6`, `3S7`, `3S8`) VALUES
+('4AL15IS007', 85, 86, 87, 88, 77, 85, 85, 88, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+('4AL15IS049', 100, 95, 95, 85, 85, 85, 85, 100, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -365,7 +374,8 @@ CREATE TABLE `STUDENT_ACADEMICS_INT1` (
 
 INSERT INTO `STUDENT_ACADEMICS_INT1` (`Usn`, `1S1`, `1S2`, `1S3`, `1S4`, `1S5`, `1S6`, `1S7`, `1S8`, `2S1`, `2S2`, `2S3`, `2S4`, `2S5`, `2S6`, `2S7`, `2S8`, `3S1`, `3S2`, `3S3`, `3S4`, `3S5`, `3S6`, `3S7`, `3S8`) VALUES
 ('4AL15IS007', 11, 12, 13, 14, 15, 16, 17, 18, 1, 2, 3, 4, 5, 6, 7, 8, 10, 11, 11, 11, 11, 11, 11, 11),
-('4AL15IS008', 11, 11, 11, 11, 11, 11, 11, 11, 20, 1, 0, 0, 0, 0, 0, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+('4AL15IS008', 15, 14, 9, 8, 15, 20, 14, 18, 20, 1, 0, 0, 0, 0, 0, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+('4AL15IS049', 19, 18, 17, 15, 12, 12, 12, 12, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -864,6 +874,7 @@ INSERT INTO `STUDENT_INFO` (`Usn`, `Fname`, `Lname`, `Gender`, `Phone`, `Email`,
 ('4AL15IS009', 'Aditya', 'Hegde', 'M', '2147483647', '2147483647', '1997-03-11', 'kodowqdkqwkd'),
 ('4AL15IS011', 'Chandan', 'Shastri', 'M', '9487755', '8747445', '1997-03-11', 'HHHHHHH'),
 ('4AL15IS016', 'Mythri', 'Gowda', 'F', '9731929679', 'mythrig1@gmail.com', '1997-08-04', 'Bangalore'),
+('4AL15IS049', 'Vishal', 'Naik', 'M', '9742489202', 'vishalnaiksonu97@gmail.com', '1995-07-02', 'Bangalore'),
 ('4AL15ME412', 'Dhanush', 'Kumar', 'M', '8892173517', 'dhanushkumar.me17@gmail.com', '2017-11-16', 'Bangalore, BTM Layout');
 
 --
@@ -877,6 +888,12 @@ DELIMITER ;
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `EVENT_LOG`
+--
+ALTER TABLE `EVENT_LOG`
+  ADD PRIMARY KEY (`TIME`);
 
 --
 -- Indexes for table `STUDENT_ACADEMICS_ATT1`

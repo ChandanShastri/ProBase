@@ -88,7 +88,7 @@
 
       <div class="row">
         <div class="input-field col s12">
-          <center><a href="add_attendance.php"  class="waves-effect waves-light btn-large">Attendance Entry</a></center>
+          <center><a href="addatt.php"  class="waves-effect waves-light btn-large">Attendance Entry</a></center>
         </div>
       </div>
 
@@ -97,18 +97,37 @@
 
       <br><br><br>
       <form class="col s12" method="post" action="Blackboards/search.php">
-<center><center><h5 class="red-text"> ProBase Search </h5></center><br>
+
 <div class="card-panel orange lighten-4"><br>
+        <center><center><h5 class="red-text"> ProBase Search </h5></center><br>
         <div class="row">
+          <div class="card-panel orange lighten-3"><br>
+          <h7 class="red-text">Enter  University Serial Number  :</h7>
+          <div class="input-field">
+            USN :&nbsp&nbsp&nbsp&nbsp&nbsp   <b>4AL</b>
+            <div class="input-field inline s3">
+              <input name="usnb" placeholder="15" id="xname" type="number" class="validate" min="13" max="20" required>
+            </div>
+            <div class="input-field inline">
 
-          <div class="input-field inline col s3 push-s3">
-            <center> <h7 class="red-text">Enter USN  :</h7></center>
-            <input name="Usn" id="xname" type="text" class="validate" required>
+              <select name="branch" required >
+                <option value="IS">ISE</option>
+                <option value="CS">CSE</option>
+                <option value="EC">ECE</option>
+                <option value="CV">CIVIL</option>
+                <option value="ME">MECH</option>
+              </select></div>
 
-          </div>
+              <div class="input-field inline">
+                <input name="usnno" placeholder="001" id="xname" type="number" class="validate" min="1" max="500" required>
+              </div>
+            <label for="xname"></label>
+          </div></div></div>
 
+          <div class="card-panel orange lighten-3">
+            <div class="row">
 
-              <div class="input-field inline col s3 push-s3">
+              <div class="input-field col s4 push-s4">
               <h7 class="red-text">Select Semester  :</h7>
               <select name="sem" required>
                 <option value="1">SEM - 1</option>
@@ -121,11 +140,11 @@
                 <option value="8">SEM - 8</option>
               </select>
             </div>
-        </div></center><br>
+        </div></div></center><br>
 
         <div class="row">
-        <center>  <button class="btn waves-effect waves-light" type="submit" name="action">Submit
-    <i class="material-icons right">send</i>
+        <center>  <button class="btn waves-effect waves-light" type="submit" name="action">SEARCH
+    <i class="material-icons right"></i>
   </button></center></div>
 
   <br><br><hr>

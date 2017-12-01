@@ -1,7 +1,7 @@
 <html>
 <body>
   <head>
-    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
     <title>ProBase | Data Entry Panel</title>
@@ -13,7 +13,7 @@
   </head>
 
   <div class="container">
-  <center><br><h5 class="orange-text">Search Results for USN : <?php echo $_POST['Usn']; ?></h5></center>
+  <center><br><h5 class="orange-text">Search Results for USN : <?php $usn="4AL".$_POST["usnb"].$_POST["branch"].$_POST["usnno"]; echo $usn; ?></h5></center>
   <br><br>
   </div>
 
@@ -33,7 +33,7 @@ else
   $_SESSION['varname'] = "ACTIVE";
 }
 
-$usn=$_POST['Usn'];
+
 $sem=$_POST['sem'];
 
 $sql = "SELECT * from STUDENT_INFO where Usn='$usn'";
@@ -85,6 +85,32 @@ echo "</tbody></table></div>";
  else {
 echo "<center><h5 class=\"red-text\"><b> I - Internal Marks Not Entered. </b> </h5></center><br>";
 }
+
+$sql1 = "SELECT 1S1,1S2,1S3,1S4,1S5,1S6,1S7,1S8 from STUDENT_ACADEMICS_ATT$sem where Usn='$usn'";
+$result = $con->query($sql1);
+
+if ($result->num_rows > 0) {
+  echo "<center><h5 class=\"red-text\"><b><br><br> I - Internal Attendance </b> </h5></center><br>";
+  echo "<div ><table border=\"0\" class=\"centered\"><tbody><thead><tr>
+  <th>SUB 1</th>
+  <th>SUB 2</th>
+  <th>SUB 3</th>
+  <th>SUB 4</th>
+  <th>SUB 5</th>
+  <th>SUB 6</th>
+  <th>SUB 7</th>
+  <th>SUB 8</th>
+</tr></thead>";
+
+while($row = $result->fetch_assoc()) {
+    echo "<tr>"."<td>".$row["1S1"]." %</td><td>" . $row["1S2"]. " %</td><td>" . $row["1S3"]." %</td><td>" . $row["1S4"]." %</td><td>" . $row["1S5"]." %</td><td>" . $row["1S6"]." %</td><td>" . $row["1S7"]." %</td><td>".$row["1S8"]." %</td><td>";
+}
+echo "</tbody></table></div>";
+}
+ else {
+echo "<center><h5 class=\"red-text\"><b> I - Internal Attendance Not Entered. </b> </h5></center><br>";
+}
+
 
 
 $sql1 = "SELECT 2S1,2S2,2S3,2S4,2S5,2S6,2S7,2S8 from STUDENT_ACADEMICS_INT$sem where Usn='$usn'";
