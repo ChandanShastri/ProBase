@@ -21,7 +21,7 @@ else
 
 
 $Usn="4AL".$_POST["usnb"].$_POST["branch"].$_POST["usnno"];
-$branch=$_POST["usnb"];
+$branch=$_POST["branch"];
 $Fname=$_POST["Fname"];
 $Lname=$_POST["Lname"];
 $Phone=$_POST["Phone"];

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Dec 01, 2017 at 04:37 PM
+-- Generation Time: Dec 03, 2017 at 02:42 PM
 -- Server version: 10.1.28-MariaDB
 -- PHP Version: 7.1.11
 
@@ -51,8 +51,9 @@ CREATE TABLE `EVENT_LOG` (
 --
 
 INSERT INTO `EVENT_LOG` (`EVENT`, `MADE_BY`, `TIME`, `REMARKS`) VALUES
-('ADDED A NEW STUDENT', '', '2017-11-21 23:36:23', ''),
-('ADDED A NEW STUDENT', '', '2017-12-01 20:47:41', '');
+('ADDED A NEW STUDENT', '', '2017-12-03 16:30:47', ''),
+('ADDED A NEW STUDENT', '', '2017-12-03 17:55:05', ''),
+('ADDED A NEW STUDENT', '', '2017-12-03 18:41:36', '');
 
 -- --------------------------------------------------------
 
@@ -93,8 +94,8 @@ CREATE TABLE `STUDENT_ACADEMICS_ATT1` (
 --
 
 INSERT INTO `STUDENT_ACADEMICS_ATT1` (`Usn`, `1S1`, `1S2`, `1S3`, `1S4`, `1S5`, `1S6`, `1S7`, `1S8`, `2S1`, `2S2`, `2S3`, `2S4`, `2S5`, `2S6`, `2S7`, `2S8`, `3S1`, `3S2`, `3S3`, `3S4`, `3S5`, `3S6`, `3S7`, `3S8`) VALUES
-('4AL15IS007', 85, 86, 87, 88, 77, 85, 85, 88, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-('4AL15IS049', 100, 95, 95, 85, 85, 85, 85, 100, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+('4AL15IS007', 86, 88, 89, 88, 86, 88, 90, 95, 75, 85, 89, 88, 89, 88, 95, 95, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+('4AL15IS049', 89, 88, 88, 85, 85, 85, 85, 85, 65, 65, 65, 65, 65, 55, 55, 55, 89, 84, 88, 88, 88, 88, 88, 88);
 
 -- --------------------------------------------------------
 
@@ -373,9 +374,8 @@ CREATE TABLE `STUDENT_ACADEMICS_INT1` (
 --
 
 INSERT INTO `STUDENT_ACADEMICS_INT1` (`Usn`, `1S1`, `1S2`, `1S3`, `1S4`, `1S5`, `1S6`, `1S7`, `1S8`, `2S1`, `2S2`, `2S3`, `2S4`, `2S5`, `2S6`, `2S7`, `2S8`, `3S1`, `3S2`, `3S3`, `3S4`, `3S5`, `3S6`, `3S7`, `3S8`) VALUES
-('4AL15IS007', 11, 12, 13, 14, 15, 16, 17, 18, 1, 2, 3, 4, 5, 6, 7, 8, 10, 11, 11, 11, 11, 11, 11, 11),
-('4AL15IS008', 15, 14, 9, 8, 15, 20, 14, 18, 20, 1, 0, 0, 0, 0, 0, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-('4AL15IS049', 19, 18, 17, 15, 12, 12, 12, 12, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+('4AL15IS007', 20, 20, 20, 20, 20, 20, 20, 20, 12, 11, 10, 20, 20, 18, 17, 15, 20, 20, 15, 12, 11, 10, 15, 16),
+('4AL15IS049', 20, 18, 12, 15, 16, 18, 13, 15, 11, 12, 16, 18, 19, 20, 20, 20, 15, 18, 11, 19, 12, 13, 20, 20);
 
 -- --------------------------------------------------------
 
@@ -644,6 +644,14 @@ CREATE TABLE `STUDENT_ACADEMICS_SEM1` (
   `ATTEMPT` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `STUDENT_ACADEMICS_SEM1`
+--
+
+INSERT INTO `STUDENT_ACADEMICS_SEM1` (`Usn`, `S1`, `S2`, `S3`, `S4`, `S5`, `S6`, `S7`, `S8`, `AS1`, `AS2`, `AS3`, `AS4`, `AS5`, `AS6`, `AS7`, `AS8`, `BACKLOGS`, `YEARBACK`, `ATTEMPT`) VALUES
+('4AL15IS007', 87, 88, 90, 75, 65, 100, 85, 95, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+('4AL15IS049', 89, 89, 100, 95, 88, 95, 89, 88, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+
 -- --------------------------------------------------------
 
 --
@@ -861,21 +869,17 @@ CREATE TABLE `STUDENT_INFO` (
   `Phone` varchar(10) DEFAULT NULL,
   `Email` varchar(30) DEFAULT NULL,
   `Birthdate` date NOT NULL,
-  `Address` varchar(50) DEFAULT NULL
+  `Address` varchar(50) DEFAULT NULL,
+  `Branch` varchar(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `STUDENT_INFO`
 --
 
-INSERT INTO `STUDENT_INFO` (`Usn`, `Fname`, `Lname`, `Gender`, `Phone`, `Email`, `Birthdate`, `Address`) VALUES
-('4AL15IS007', 'Chetan', 'Shastri', 'M', '9481277335', 'crshastri@gmail.com', '2017-11-08', 'Chandan Ramesh Shastri, Swarnavalli, Mathadeval, S'),
-('4AL15IS008', 'Anvaya', 'Kini', 'F', '9487555889', 'anvaya@gmail.com', '2017-11-18', 'Moodbidri'),
-('4AL15IS009', 'Aditya', 'Hegde', 'M', '2147483647', '2147483647', '1997-03-11', 'kodowqdkqwkd'),
-('4AL15IS011', 'Chandan', 'Shastri', 'M', '9487755', '8747445', '1997-03-11', 'HHHHHHH'),
-('4AL15IS016', 'Mythri', 'Gowda', 'F', '9731929679', 'mythrig1@gmail.com', '1997-08-04', 'Bangalore'),
-('4AL15IS049', 'Vishal', 'Naik', 'M', '9742489202', 'vishalnaiksonu97@gmail.com', '1995-07-02', 'Bangalore'),
-('4AL15ME412', 'Dhanush', 'Kumar', 'M', '8892173517', 'dhanushkumar.me17@gmail.com', '2017-11-16', 'Bangalore, BTM Layout');
+INSERT INTO `STUDENT_INFO` (`Usn`, `Fname`, `Lname`, `Gender`, `Phone`, `Email`, `Birthdate`, `Address`, `Branch`) VALUES
+('4AL15IS007', 'Chandan', 'Shastri', 'M', '948127735', 'crshastri@gmail.com', '1997-03-11', 'Chandan Ramesh Shastri, Swarnavalli, Mathadeval, S', 'IS'),
+('4AL15IS049', 'Vishal ', 'Naik', 'M', '9742489202', 'vishalnaiksonu97@gmail.com', '1997-07-02', 'Bangalore.', 'IS');
 
 --
 -- Triggers `STUDENT_INFO`

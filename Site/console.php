@@ -92,14 +92,62 @@
         </div>
       </div>
 
-<br><br><hr>
+<br><br><hr><br>
+
+<form class="col s12" method="post" action="Blackboards/dangerzone.php">
+<center><center><h5 class="red-text"> Attendance Shortage & Coaching Lists </h5></center><br><br>
+<left><h6 class="blue-text"><b> Select Semester and Exam :</b> </h6></left><br>
+<div class="card-panel orange lighten-4">
+    <div class="row">
+        <div class="input-field col s3">
+        <h7 class="red-text">Select Semester  :</h7>
+        <select name="sem" required>
+          <option value="1">SEM - 1</option>
+          <option value="2">SEM - 2</option>
+          <option value="3">SEM - 3</option>
+          <option value="4">SEM - 4</option>
+          <option value="5">SEM - 5</option>
+          <option value="6">SEM - 6</option>
+          <option value="7">SEM - 7</option>
+          <option value="8">SEM - 8</option>
+        </select>
+      </div>
+
+      <div class="input-field col s3">
+        <h7 class="red-text">Select Internal Time  :</h7>
+      <select name="int" id="exam" required>
+        <option value="1"> I - Internals</option>
+        <option value="2"> II - Internals</option>
+        <option value="3"> III - Internals</option>
+
+      </select>
+
+      </div>
+      <div class="input-field col s3"><br>
+        <button class="btn waves-effect waves-light" type="submit" > View
+    <i class="material-icons right"></i>
+  </button>
+      </div>
+    </div></div></form>
+<br><br>
+<hr><br>
+
+
+<center><center><h5 class="red-text"> Database Event Log </h5></center><br>
+<div class="row">
+  <div class="input-field col s12">
+    <center><a href="Blackboards/eventlog.php"  class="waves-effect waves-light btn-large">View Log</a></center>
+  </div>
+</div>
+<br><br>
+<hr>
 
 
       <br><br><br>
       <form class="col s12" method="post" action="Blackboards/search.php">
 
 <div class="card-panel orange lighten-4"><br>
-        <center><center><h5 class="red-text"> ProBase Search </h5></center><br>
+        <center><center><h5 class="red-text"> Database Search </h5></center><br>
         <div class="row">
           <div class="card-panel orange lighten-3"><br>
           <h7 class="red-text">Enter  University Serial Number  :</h7>
