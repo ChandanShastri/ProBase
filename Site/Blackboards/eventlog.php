@@ -28,6 +28,8 @@
 
 <?php
 
+error_reporting(0);
+
 $con = mysqli_connect("localhost","chandanshastri","321654","COLLEGE");
 
 if (mysqli_connect_errno())
@@ -62,12 +64,25 @@ if ($result->num_rows > 0) {
     echo "<b><center>Event Log has been recently cleared.</center></b>";
 }
 
+if($_POST['clear']=="CLR")
+{
+$sql = "CALL CLEAR_LOGS()";
+$con->query($sql);
+
+}
+
+
 echo "</div>";
 
 
 ?>
 
-
+<form class="col s12" method="post" action="#">
+<div class="row">
+<center>  <button class="btn waves-effect waves-light" type="submit" name="clear" value="CLR">CLEAR LOGS
+<i class="material-icons right"></i>
+</button></center></div>
+</form>
 
 </body>
 </html>
