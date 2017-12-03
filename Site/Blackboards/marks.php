@@ -53,7 +53,8 @@ else {
 }
 
 
-
+if($int !="SEM")
+{
 
 $check="SELECT * FROM STUDENT_ACADEMICS_INT$sem where Usn='$usn'";
 
@@ -77,5 +78,40 @@ if ($con->query($sql) === TRUE) {
 else {
     echo "Error: " . $sql . "<br>" . $con->error;
 }
+
+
+}
+
+else {
+
+
+
+
+
+
+  $check="SELECT * FROM STUDENT_ACADEMICS_SEM$sem where Usn='$usn'";
+
+  $result = $con->query($check);
+
+  if ($result->num_rows > 0)
+  {
+    $sql ="UPDATE STUDENT_ACADEMICS_SEM$sem SET S1 = $int1, S2 = $int2, S3 = $int3, S4 = $int4, S5 = $int5, S6 = $int6, S7 = $int7, S8 = $int8 where Usn='$usn'";
+  }
+  else
+  {
+    $sql = "INSERT INTO STUDENT_ACADEMICS_SEM$sem (Usn,S1,S2,S3,S4,S5,S6,S7,S8) values ('$usn','$int1','$int2','$int3','$int4','$int5','$int6','$int7','$int8')";
+  }
+  if ($con->query($sql) === TRUE) {
+    $_SESSION['success'] = 'Marks Entry Success';
+    $_SESSION['varname']="MM";
+    header('Location: ../add_marks.php');exit;
+
+  }
+
+  else {
+      echo "Error: " . $sql . "<br>" . $con->error;
+  }
+}
+
 
 ?>

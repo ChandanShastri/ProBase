@@ -20,7 +20,8 @@ else
 
 
 
-$Usn=$_POST["Usn"];
+$Usn="4AL".$_POST["usnb"].$_POST["branch"].$_POST["usnno"];
+$branch=$_POST["usnb"];
 $Fname=$_POST["Fname"];
 $Lname=$_POST["Lname"];
 $Phone=$_POST["Phone"];
@@ -29,7 +30,7 @@ $Birthdate=$_POST["Birthdate"];
 $Address=$_POST["Address"];
 $Gender=$_POST["Gender"];
 
-$sql = "INSERT INTO STUDENT_INFO values ('$Usn','$Fname','$Lname','$Gender','$Phone','$Email','$Birthdate','$Address')";
+$sql = "INSERT INTO STUDENT_INFO values ('$Usn','$Fname','$Lname','$Gender','$Phone','$Email','$Birthdate','$Address','$branch')";
 
 if ($con->query($sql) === TRUE) {
   $_SESSION['success'] = 'User Registration Success (Please login and update your profile)';
@@ -38,7 +39,9 @@ if ($con->query($sql) === TRUE) {
   header('Location: ../console.php');exit;
 
 } else {
-    echo "Error: " . $sql . "<br>" . $conn->error;
+    //echo "Error: " . $sql . "<br>" . $conn->error;
+    $_SESSION['varname']="FF";
+    header('Location: ../add_student.php');exit;
 }
 
 ?>

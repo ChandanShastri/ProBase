@@ -12,9 +12,23 @@
     <link href="../css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   </head>
 
+  <nav>
+      <div class="nav-wrapper">
+        <div class="col s12">
+          <a href="../index.php" class="breadcrumb">&nbsp Home</a>
+          <a href="../console.php" class="breadcrumb">Console</a>
+
+
+        </div>
+      </div>
+    </nav>
+
+
+
+
   <div class="container">
-  <center><br><h5 class="orange-text">Search Results for USN : <?php $usn="4AL".$_POST["usnb"].$_POST["branch"].$_POST["usnno"]; echo $usn; ?></h5></center>
-  <br><br>
+  <center><br><h5 class="orange-text"> USN : <?php $usn="4AL".$_POST["usnb"].$_POST["branch"].$_POST["usnno"]; echo $usn; ?></h5></center>
+  <br>
   </div>
 
 <?php
@@ -41,20 +55,13 @@ $result = $con->query($sql);
 
 if ($result->num_rows > 0) {
     // output data of each row
-    echo "<div ><table border=\"0\" class=\"centered\"><tbody><thead><tr>
-    <th>USN</th>
-    <th>First Name</th>
-    <th>Last Name</th>
-    <th>Gender</th>
-    <th>Birthdate</th>
-    <th>Phone</th>
-    <th>E-Mail</th>
-    <th>Address</th>
-  </tr></thead>";
+
     while($row = $result->fetch_assoc()) {
-        echo "<tr>"."<td>".$row["Usn"]."</td><td>" . $row["Fname"]. "</td><td>" . $row["Lname"]."</td><td>" . $row["Gender"]."</td><td>" . $row["Birthdate"]."</td><td>" . $row["Phone"]."</td><td>" . $row["Email"]."</td><td>".$row["Address"]."</td></tr>";
+        echo "<div class=\"card-panel orange lighten-4\">"."<b>General Info :<br><br><div class=\"card-panel orange lighten-3\">USN : </b>".$row["Usn"]."<br><b>Branch : </b>".$row["Branch"]."<br><b>Name :</b>" . $row["Fname"]. " " . $row["Lname"]."<br><b>Gender : </b>" . $row["Gender"]."<br><b>Date of Birth : </b>" . $row["Birthdate"]."<br></div><br><b>Contact Info :</b><br><div class=\"card-panel orange lighten-3\"><b>Mobile No. : </b>" . $row["Phone"].
+        "<br><b>Email ID : </b>"
+        . $row["Email"]."<br><b>Address : </b>".$row["Address"]."</div><br>";
     }
-    echo "</tbody></table></div>";
+    echo "</div>";
 }
 else {
   $_SESSION['varname']="USNERR";

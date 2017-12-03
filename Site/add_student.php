@@ -11,6 +11,20 @@
     <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
     <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   </head>
+  <?php
+
+  session_start();
+  error_reporting(0);
+  if($_SESSION['varname']=="FF")
+  {
+  echo "<script>alert(\" USN already exists..!!  \\n Please Check your Inputs again...! \")</script>";
+
+  }
+  session_destroy();
+  ?>
+
+
+
 
   <nav>
       <div class="nav-wrapper">
@@ -21,11 +35,16 @@
         </div>
       </div>
     </nav>
-  <script>
-  $(document).ready(function() {
-  $('select').material_select();
-  });
-  </script>
+
+    <script src="js/jquery-3.2.1.min.js"></script>
+        <script src="js/materialize.js"></script>
+        <script src="js/init.js"></script>
+        <script type="text/javascript">
+        $(document).ready(function() {
+          $('select').material_select();
+        });
+
+        </script>
 
 
 <!-- DATA ENTRY  -->
@@ -37,76 +56,93 @@
 
 
 
-  <div class="row">
+
     <form class="col s12" method="post" action="Blackboards/blackboard1.php">
 
-      <div class="row">
-        <div class="input-field col s4">
-          USN :
-          <input name="Usn" id="xname" type="text" class="validate" required>
+      <left><h6 class="blue-text"><b> Enter University Serial Number ( USN ) :</b></h6></left><br>
+        <div class="card-panel orange lighten-4">
+        <div class="input-field col">
+          USN :&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp   <b>4AL</b>
+          <div class="input-field inline">
+            <input name="usnb" placeholder="15" id="xname" type="number" class="validate" min="13" max="20" required>
+          </div>
+          <div class="input-field inline col ">
+
+            <select name="branch" required >
+              <option value="IS">ISE</option>
+              <option value="CS">CSE</option>
+              <option value="EC">ECE</option>
+              <option value="CV">CIVIL</option>
+              <option value="ME">MECH</option>
+            </select></div>
+
+            <div class="input-field inline ">
+              <input name="usnno" placeholder="001" id="xname" type="number" class="validate" min="1" max="500" required>
+            </div>
           <label for="xname"></label>
-        </div>
-      </div>
+        </div></div><br>
+        <left><h6 class="blue-text"><b> Enter the Proper Name of the Student mentioned in Legal Documents :</b></h6></left><br>
+        <div class="card-panel orange lighten-4">
+
       <div class="row">
+
         <div class="input-field col s6">
-          Name :
+          <b>Name :
           <input placeholder="" name="Fname" id="first_name" type="text" class="validate" required>
           <label for="first_name"></label>
         </div>
         <div class="input-field col s6">
-          Last Name :
+          Last Name :</b>
           <input name="Lname" id="last_name" type="text" class="validate" required>
           <label for="last_name"></label>
         </div>
       </div>
+    </div><br>
+<left><h6 class="blue-text"><b> Enter the Contact Details & Date of Birth. :</b></h6></left><br>
+      <div class="card-panel orange lighten-4">
       <div class="row">
-        <div class="input-field col s12">
-          Phone :
+        <div class="input-field col inline">
+          <b>Phone :
           <input name="Phone" value="" id="Phone" type="number" class="validate" required>
           <label for="xname"></label>
         </div>
-      </div>
 
 
 
-
-
-
-
-
-      <div class="row">
-        <div class="input-field col s12">
+        <div class="input-field inline">
           E-mail ID :
           <input name="Email" value="" id="Email" type="email" class="validate" required>
           <label for="xname"></label>
         </div>
-      </div>
 
-      <div class="row">
-        <div class="input-field col s12">
-          Date of Birth :
+        <div class="input-field inline">
+          Date of Birth :</b>
           <input name="Birthdate" value="" id="DATE" type="date" class="date-picker" required>
           <label for="xname"></label>
-        </div>
-      </div>
+        </div><br>
+
+        <br>
+        <center><b>Select Gender :<br><br></b>
+        <input name="Gender" type="radio" id="test1" value="M"  required/>
+        <label for="test1">Male</label>&nbsp&nbsp&nbsp
+        <input name="Gender" type="radio" id="test2" value="F" required/>
+        <label for="test2">Female</label>
+      </center>
 
 
+    </div></div><br>
+
+      <left><h6 class="blue-text"><b> Enter the Permanent Residential Address :</b></h6></left><br>
+            <div class="card-panel orange lighten-4">
       <div class="row">
         <div class="input-field col s12">
-          Address :
+        <b>  Address : </b>
           <textarea name="Address" id="textarea1" class="materialize-textarea" required></textarea>
           <label for=""></label>
         </div>
-      </div>
+      </div></div>
 
-      <p>
-      <input name="Gender" type="radio" id="test1" value="M"  required/>
-      <label for="test1">Male</label>
-    </p>
-    <p>
-      <input name="Gender" type="radio" id="test2" value="F" required/>
-      <label for="test2">Female</label>
-    </p>
+
 
 <br><br>
 <div class="row">
@@ -122,7 +158,7 @@
 
         <div class="row">
         <center>  <button class="btn waves-effect waves-light" type="submit" name="action">Submit
-    <i class="material-icons right">send</i>
+    <i class="material-icons right"></i>
   </button></center>
 
       </div>
@@ -134,7 +170,7 @@
 
 
     </form>
-  </div>
+
 <center>
 
 

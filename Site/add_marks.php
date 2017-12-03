@@ -54,10 +54,75 @@
 
       </script>
 
+      <script>
+      function marksSetup()
+      {
+
+        var c1=document.getElementById("mk1");
+        var c2=document.getElementById("mk2");
+        var c3=document.getElementById("mk3");
+        var c4=document.getElementById("mk4");
+        var c5=document.getElementById("mk5");
+        var c6=document.getElementById("mk6");
+        var c7=document.getElementById("mk7");
+        var c8=document.getElementById("mk8");
+        var x=document.getElementById("exam");
+        var head=document.getElementById("examhead");
+        var lock=document.getElementById("sendinfo");
+
+        if(x.value=="SEM")
+        {
+          c1.max = "100";
+          c2.max = "100";
+          c3.max = "100";
+          c4.max = "100";
+          c5.max = "100";
+          c6.max = "100";
+          c7.max = "100";
+          c8.max = "100";
+          lock.innerHTML="<button  class=\"btn waves-effect waves-light\" type=\"submit\" name=\"action\">Submit</button>";
+          head.innerHTML="Semester Exam Marks Entry";
+            alert("System Ready for Semester Marks Entry");
+        }
+        else {
+          c1.max = "20";
+          c2.max = "20";
+          c3.max = "20";
+          c4.max = "20";
+          c5.max = "20";
+          c6.max = "20";
+          c7.max = "20";
+          c8.max = "20";
+          lock.innerHTML="<button  class=\"btn waves-effect waves-light\" type=\"submit\" name=\"action\">Submit</button>";
+
+            if(x.value=="1")
+            {
+            head.innerHTML="I - Internal Exam Marks Entry";
+            alert("System Ready for I - Internal Marks Entry");
+            }
+            else
+
+            if(x.value=="2")
+            {
+            head.innerHTML="II - Internal Exam Marks Entry";
+            alert("System Ready for II - Internal Marks Entry");
+            }
+            else
+            {
+              head.innerHTML="III - Internal Exam Marks Entry";
+              alert("System Ready for III - Internal Marks Entry");
+            }
+        }
+      }
+      </script>
+
+
+
+
 <!-- DATA ENTRY  -->
 <div class="container">
   <br><br>
-<center><h3 class="red-text"> Internal Marks Entry Panel </h3></center>
+<center><h3 class="red-text"> Exam Marks Entry Panel </h3></center>
 <br><br>
 
 
@@ -92,7 +157,7 @@
 <hr><br>
 
 
-  <left><h6 class="blue-text"><b> Select Semester and Internal Exam :</b> </h6></left><br>
+  <left><h6 class="blue-text"><b> Select Semester and Exam :</b> </h6></left><br>
   <div class="card-panel orange lighten-4">
       <div class="row">
           <div class="input-field col s3">
@@ -110,87 +175,93 @@
         </div>
 
         <div class="input-field col s3">
-          <h7 class="red-text">Select Internals  :</h7>
-        <select name="int" required>
+          <h7 class="red-text">Select Type of Exam  :</h7>
+        <select name="int" id="exam" required>
           <option value="1"> I - Internals</option>
           <option value="2"> II - Internals</option>
           <option value="3"> III - Internals</option>
+          <option value="SEM"> Semester Exam </option>
         </select>
 
+        </div>
+        <div class="input-field col s3"><br>
+          <button class="btn waves-effect waves-light" onclick="marksSetup()" type="button" >UPDATE
+      <i class="material-icons right"></i>
+    </button>
         </div>
       </div></div><br><br>
 
 <hr><br><br>
 
 
-      <center><h5 class="red-text"><b> Enter the Marks as per the Subject </b> </h5></center><br>
+      <center><h5 class="red-text" id="examhead"><marquee>System Not Ready. Please click on the Update Button above.</marquee></h5></center><br>
       <div class="card-panel orange lighten-4">
       <center>
-      <div class="row"><b>Subject 1 Marks ( 0 - 20 ) :</b>&nbsp &nbsp
+      <div class="row"><b>Subject 1 Marks   :</b>&nbsp &nbsp
         <div class="input-field inline">
-          <input name="int1" id="xname" type="number" class="validate" min="0" max="20" required>
+          <input name="int1" id="mk1" type="number" class="validate" min="0" max="20" required>
           <label for="xname"></label>
         </div>
 
 
 
-        <b>&nbsp &nbsp&nbsp &nbsp&nbsp &nbspSubject 2 Marks ( 0 - 20 ) :</b>&nbsp &nbsp
+        <b>&nbsp &nbsp&nbsp &nbsp&nbsp &nbspSubject 2 Marks   :</b>&nbsp &nbsp
         <div class="input-field inline">
 
-          <input name="int2" id="xname" type="number" class="validate" min="0" max="20" required>
-          <label for="xname"></label>
-        </div>
-      </div>
-
-
-
-      <div class="row"><b>Subject 3 Marks ( 0 - 20 ) :</b>&nbsp &nbsp
-        <div class="input-field inline">
-          <input name="int3" id="xname" type="number" class="validate" min="0" max="20" required>
-          <label for="xname"></label>
-        </div>
-
-
-
-        <b>&nbsp &nbsp&nbsp &nbsp&nbsp &nbspSubject 4 Marks ( 0 - 20 ) :</b>&nbsp &nbsp
-        <div class="input-field inline">
-
-          <input name="int4" id="xname" type="number" class="validate" min="0" max="20" required>
-          <label for="xname"></label>
-        </div>
-      </div>
-
-
-      <div class="row"><b>Subject 5 Marks ( 0 - 20 ) :</b>&nbsp &nbsp
-        <div class="input-field inline">
-          <input name="int5" id="xname" type="number" class="validate" min="0" max="20" required>
-          <label for="xname"></label>
-        </div>
-
-
-
-        <b>&nbsp &nbsp&nbsp &nbsp&nbsp &nbspSubject 6 Marks ( 0 - 20 ) :</b>&nbsp &nbsp
-        <div class="input-field inline">
-
-          <input name="int6" id="xname" type="number" class="validate" min="0" max="20" required>
+          <input name="int2" id="mk2" type="number" class="validate" min="0" max="20" required>
           <label for="xname"></label>
         </div>
       </div>
 
 
 
-      <div class="row"><b>Subject 7 Marks ( 0 - 20 ) :</b>&nbsp &nbsp
+      <div class="row"><b>Subject 3 Marks   :</b>&nbsp &nbsp
         <div class="input-field inline">
-          <input name="int7" id="xname" type="number" class="validate" min="0" max="20" required>
+          <input name="int3" id="mk3" type="number" class="validate" min="0" max="20" required>
           <label for="xname"></label>
         </div>
 
 
 
-        <b>&nbsp &nbsp&nbsp &nbsp&nbsp &nbspSubject 8 Marks ( 0 - 20 ) :</b>&nbsp &nbsp
+        <b>&nbsp &nbsp&nbsp &nbsp&nbsp &nbspSubject 4 Marks   :</b>&nbsp &nbsp
         <div class="input-field inline">
 
-          <input name="int8" id="xname" type="number" class="validate" min="0" max="20" required>
+          <input name="int4" id="mk4" type="number" class="validate" min="0" max="20" required>
+          <label for="xname"></label>
+        </div>
+      </div>
+
+
+      <div class="row"><b>Subject 5 Marks   :</b>&nbsp &nbsp
+        <div class="input-field inline">
+          <input name="int5" id="mk5" type="number" class="validate" min="0" max="20" required>
+          <label for="xname"></label>
+        </div>
+
+
+
+        <b>&nbsp &nbsp&nbsp &nbsp&nbsp &nbspSubject 6 Marks   :</b>&nbsp &nbsp
+        <div class="input-field inline">
+
+          <input name="int6" id="mk6" type="number" class="validate" min="0" max="20" required>
+          <label for="xname"></label>
+        </div>
+      </div>
+
+
+
+      <div class="row"><b>Subject 7 Marks   :</b>&nbsp &nbsp
+        <div class="input-field inline">
+          <input name="int7" id="mk7" type="number" class="validate" min="0" max="20" required>
+          <label for="xname"></label>
+        </div>
+
+
+
+        <b>&nbsp &nbsp&nbsp &nbsp&nbsp &nbspSubject 8 Marks   :</b>&nbsp &nbsp
+        <div class="input-field inline">
+
+          <input name="int8" id="mk8" type="number" class="validate" min="0" max="20" required>
           <label for="xname"></label>
         </div>
       </div>
@@ -206,7 +277,7 @@
 
 
         <div class="row">
-        <center>  <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+        <center id="sendinfo">  <button  class="btn disabled waves-effect waves-light" type="submit" name="action">Please Click on Update Button to Configure the System
     <i class="material-icons right"></i>
   </button></center>
 
