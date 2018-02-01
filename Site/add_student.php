@@ -8,7 +8,7 @@
 
     <!-- CSS  -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link href="css/MX.css" type="text/css" rel="stylesheet" media="screen,projection"/>
     <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   </head>
   <?php
@@ -36,9 +36,9 @@
       </div>
     </nav>
 
-    <script src="js/jquery-3.2.1.min.js"></script>
-        <script src="js/materialize.js"></script>
-        <script src="js/init.js"></script>
+    <script src="js/JX.js"></script>
+        <script src="js/MX.js"></script>
+        <script src="js/IX.js"></script>
         <script type="text/javascript">
         $(document).ready(function() {
           $('select').material_select();
@@ -196,8 +196,8 @@
 </div>
 
 
-  <script src="js/materialize.js"></script>
-  <script src="js/init.js"></script>
+  <script src="js/MX.js"></script>
+  <script src="js/IX.js"></script>
 
 </body>
 </html>
