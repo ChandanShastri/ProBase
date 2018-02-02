@@ -13,7 +13,7 @@
 </head>
 
 
-<?php header('Location: console.php');exit;  ?>
+
 
 
 
