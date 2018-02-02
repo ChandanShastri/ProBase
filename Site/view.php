@@ -5,7 +5,7 @@
       <link rel="icon" href="favicon.ico" type="image/x-icon">
     <title>Chandan Shastri's Home</title>
     <meta name="description" content="360&deg; Image - A-Frame">
-    <script src="js/aframe.min.js"></script>
+    <script src="js/AVX.js"></script>
     <link href="css/MX.css" type="text/css" rel="stylesheet" media="screen,projection"/>
     <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 
